@@ -1258,6 +1258,7 @@ focus {
         font-size: 12px;
         border: none;
         width: 1500px;
+        font-weight: bold;
     }
 
     #button_toggle_white {
@@ -1266,6 +1267,7 @@ focus {
         font-size: 12px;
         border: none;
         width: 1500px;
+        font-weight: bold;
     }
 
 
