@@ -1,6 +1,6 @@
 const spanElement = document.getElementById("typed-text");
 const cursorElement = document.getElementById("cursor");
-const words = ["Front-End Dev.","UI/UX Designer"]; // Words to be typed
+const words = ["Front-End Developer.","UI/UX Designer."]; // Words to be typed
 let currentWordIndex = 0;
 let currentCharIndex = 0;
 let isTyping = true;
@@ -13,7 +13,7 @@ function typeText() {
       setTimeout(typeText, 110); // Delay between each character typing
     } else {
       isTyping = false;
-      spanElement.style.borderBottom = "2px solid gray"; // Change line color
+      spanElement.style.borderBottom = "2px, #E34234"; // Change line color
       cursorElement.style.opacity = 0; // Show cursor
       setTimeout(typeText, 2100); // Delay before deleting text
     }
@@ -23,7 +23,7 @@ function typeText() {
       setTimeout(typeText, 50); // Delay between each character deletion
     } else {
       isTyping = true;
-      spanElement.style.borderBottom = "2px solid gray"; // Change line color
+      spanElement.style.borderBottom = "2px, #E34234"; // Change line color
       cursorElement.style.display = "inline-block"; // Show cursor
       currentWordIndex = (currentWordIndex + 1) % words.length; // Move to the next word
       currentCharIndex = 0;
