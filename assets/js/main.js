@@ -230,13 +230,76 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// const hamburgerMenu = document.querySelector('.hamburger-menu');
+// const menuItems = document.querySelector('.menu-items');
+// let menuOpen = false;
+
+// hamburgerMenu.addEventListener('click', function(event) {
+//   event.stopPropagation(); // Prevent event bubbling to document
+//   toggleMenu();
+// });
+
+// document.addEventListener('click', function() {
+//   if (menuOpen) {
+//     toggleMenu();
+//   }
+// });
+
+// // Get all the menu items
+// const menuItemsList = document.querySelectorAll('.menu-items li a');
+
+// // Add click event listeners to the menu items
+// menuItemsList.forEach(item => {
+//   item.addEventListener('click', scrollToSection);
+// });
+
+// // Function to scroll to the corresponding section
+// function scrollToSection(event) {
+//   event.preventDefault(); // Prevent default anchor behavior
+
+//   const targetId = this.getAttribute('href'); // Get the target section ID
+//   const targetSection = document.querySelector(targetId); // Get the target section element
+
+//   if (targetSection) {
+//     targetSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the target section with smooth animation
+//     toggleMenu(); // Close the menu after scrolling to the section
+//   }
+// }
+
+// function toggleMenu() {
+//   if (menuOpen) {
+//     menuItems.classList.remove('show');
+//   } else {
+//     menuItems.classList.add('show');
+//   }
+  
+//   menuOpen = !menuOpen;
+// }
+
+// document.documentElement.style.setProperty('--animate-duration', '3s');
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+      observer.unobserve(entry.target); // Disconnect the observer for the element
+    }
+  });
+}, { threshold: 0.1 }); // Adjust the threshold value as needed
+
+const elements = document.querySelectorAll('.element');
+elements.forEach((element) => {
+  observer.observe(element);
+});
+
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const menuItems = document.querySelector('.menu-items');
 let menuOpen = false;
+let menuTimeout;
 
 hamburgerMenu.addEventListener('click', function(event) {
   event.stopPropagation(); // Prevent event bubbling to document
   toggleMenu();
+  resetMenuTimeout();
 });
 
 document.addEventListener('click', function() {
@@ -263,6 +326,7 @@ function scrollToSection(event) {
   if (targetSection) {
     targetSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the target section with smooth animation
     toggleMenu(); // Close the menu after scrolling to the section
+    resetMenuTimeout();
   }
 }
 
@@ -276,18 +340,11 @@ function toggleMenu() {
   menuOpen = !menuOpen;
 }
 
-// document.documentElement.style.setProperty('--animate-duration', '3s');
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
-      observer.unobserve(entry.target); // Disconnect the observer for the element
+function resetMenuTimeout() {
+  clearTimeout(menuTimeout); // Clear the previous timeout, if any
+  menuTimeout = setTimeout(() => {
+    if (menuOpen) {
+      toggleMenu();
     }
-  });
-}, { threshold: 0.1 }); // Adjust the threshold value as needed
-
-const elements = document.querySelectorAll('.element');
-elements.forEach((element) => {
-  observer.observe(element);
-});
-
+  }, 3000); // Set the timeout to 5000 milliseconds (5 seconds)
+}
