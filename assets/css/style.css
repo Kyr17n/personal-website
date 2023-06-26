@@ -947,8 +947,10 @@ focus {
 
     /* black theme start */
     .body-black {
-        background-color: #000000;
+        background-color: #1f1f1f;
         color: #ffffff;
+        line-height: 1.9;
+        font-size: 16px;
 
         .hamburger-menu {
             position: fixed;
@@ -1107,6 +1109,7 @@ focus {
         transition: background-color 0.3s ease;
         background-color: #ffffff;
         color: #1f1f1f;
+        line-height: 1.9;
 
         /* padding: 20px 100px 20px 100px; */
 
@@ -1255,6 +1258,7 @@ focus {
         font-size: 12px;
         border: none;
         width: 1500px;
+        font-weight: bold;
     }
 
     #button_toggle_white {
@@ -1263,6 +1267,7 @@ focus {
         font-size: 12px;
         border: none;
         width: 1500px;
+        font-weight: bold;
     }
 
 
@@ -1338,6 +1343,7 @@ focus {
         display: flex;
         flex-direction: column;
         text-align: center;
+        border-top: 1px solid white ;
 
 
 
