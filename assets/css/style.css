@@ -803,11 +803,22 @@ padding: 50px 50px 50px 50px;
 
 
 .whatsapp-button:hover,
-focus {
-    border-radius: 12px;
+focus  {
+    border-radius: 0px;
     color: #000;
 
     border-bottom: none;
+
+}
+
+.whatsapp-button:hover,
+focus  {
+    
+    border-radius: 0px;
+    color: #000;
+
+    border-bottom: none;
+    
 }
 
 .whatsapp-button:focus {
@@ -1084,11 +1095,11 @@ focus {
     #backToTopBtn {
         display: none;
         position: fixed;
-        bottom: 20px;
+        bottom: 50px;
         right: 20px;
         z-index: 99;
-        font-size: 14px;
-        padding: 5px;
+        font-size: 16px;
+        padding: 10px;
         border: 2px solid white;
         background-color: #0000008a;
         color: #fff;
@@ -1253,7 +1264,7 @@ focus {
 
 
     #button_toggle_black {
-        background-color: #000000;
+        background-color: #1f1f1f;
         color: #ffffff;
         font-size: 12px;
         border: none;
@@ -1616,7 +1627,7 @@ focus {
 
    
     #email-button:hover {
-        border-bottom: 1px solid gray;
+        border-bottom: 1px none;
 
     }
 
@@ -1630,7 +1641,7 @@ focus {
         border-radius: 12px;
         color: #000;
 
-        border-bottom: 1px solid gray;
+        border-bottom: none;
     }
 
     .whatsapp-button:focus {
