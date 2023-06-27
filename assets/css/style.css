@@ -107,7 +107,7 @@
 
 
 #typed-text {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #e34234;
     margin: 0;
 }
 
@@ -131,6 +131,7 @@
     }
 }
 a.button {
+    display: none;
     background-color: gray;
     color: white;
     display: inline-block;
@@ -164,13 +165,14 @@ a.button {
 .filter-button:focus {
     outline: none;
     color: #ffffff;
-    border: 1px solid gray;
-    background-color: #000;
+    border: 1px solid #e34234;
+    background-color: #e34234;
 }
 
 .filter-button:hover {
-    text-decoration: underline;
-    background-color: #000000;
+    text-decoration: none;
+    background-color:#e34234;
+    color: #fff;
 }
 
 
@@ -259,8 +261,8 @@ a.button {
     z-index: 99;
     font-size: 16px;
     padding: 10px;
-    border: 2px solid white;
-    background-color: #000;
+    border: 2px solid#e34234;
+    background-color:#e34234;;
     color: #fff;
     cursor: pointer;
 }
@@ -328,7 +330,7 @@ a:active {
 
     color: rgb(255, 255, 255);
     text-decoration: none;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid #e34234;
 }
 
 .navigation-list__item--active {
@@ -425,9 +427,10 @@ button:visited {
     width: 100px;
     background-color: #000000;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 14px;
     padding: 0;
     cursor: pointer;
+    padding: 5px;
 }
 
 #button_toggle_white {
@@ -435,7 +438,7 @@ button:visited {
     width: 100px;
     background-color: #ffffff;
     color: #2b2b2b;
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -443,7 +446,6 @@ button:visited {
 
 
 }
-
 
 
 
@@ -479,9 +481,15 @@ button:visited {
     font-size: 20px;
 }
 .toggle-container__row--item h2 span{
-font-size: 16px;
+font-size: 18px;
 
 }
+
+.toggle-container__row--item p{
+    font-size: 18px;
+    line-height: 1.5;
+    
+    }
 .toggle-container__row--item {
     margin-right: 20px;
     flex: 1 1 100px;
@@ -502,12 +510,14 @@ font-size: 16px;
     height: auto;
 }
 
-/* .toggle-container__row--item:nth-child(3) {
+.toggle-container__row--item:nth-child(3) {
     margin-right: 0px;
-    margin-left: 20px;
+    margin-left: 0px;
     flex-basis: 400px;
     max-width: 500px;
-} */
+    max-height: auto;
+    font-size: 12px;
+}
 
 .text-padding {
     margin: 0;
@@ -523,9 +533,11 @@ font-size: 16px;
 }
 
 #work {
-    padding: 50px 0px 20px 0px;
+    padding: 50px 0px 0px 0px;
 }
-
+#work h1 {
+    padding: 10px 0px 0px 0px;
+}
 /* 
 .about-detail {
     max-width: 100;
@@ -671,7 +683,7 @@ focus {
 
 
 #contact {
-    padding: 20px 0px 20px 0px;
+    padding: 50px 0px 20px 0px;
     /* margin-top: 30px; */
     margin-bottom: 0px;
     text-align: center;
@@ -808,7 +820,7 @@ padding: 50px 50px 50px 50px;
 }
 
 #skills {
-    padding: 50px 0px 20px 0px;
+    padding: 50px 0px 0px 0px;
 }
 
 .experience-section {
@@ -822,9 +834,9 @@ padding: 50px 50px 50px 50px;
     margin-bottom: 30px;
 }
 
-.experience-container {
+/* .experience-container {
     margin-bottom: 60px;
-}
+} */
 
 .experience-container1 {
     margin-bottom: 0px;
@@ -833,6 +845,11 @@ padding: 50px 50px 50px 50px;
 #experience {
     padding: 50px 0px 0px 0px;
 }
+#experience h1 {
+    padding: 10px 0px 0px 0px;
+    margin-top: 10px;
+}
+
 
 #email-button {
     display: inline-block;
@@ -854,21 +871,12 @@ padding: 50px 50px 50px 50px;
 
 }
 
-
-.whatsapp-button:hover,
-focus  {
-    border-radius: 0px;
-    color: #000;
-
+#email-button:focus {
     border-bottom: none;
 
 }
-
 .whatsapp-button:hover,
 focus  {
-    
-    border-radius: 0px;
-    color: #000;
 
     border-bottom: none;
     
@@ -876,7 +884,7 @@ focus  {
 
 .whatsapp-button:focus {
     border-radius: 12px;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    border-bottom: none;
 
 }
 
@@ -1645,10 +1653,10 @@ focus  {
     }
 
     #skills {
-        padding: 30px 0px 20px 0px;
+        padding: 30px 0px 0px 0px;
     }
     #skills h1{
-        margin: 0px;
+        padding: 10px 0px 0px 0px;
     }
     .experience-section {
         margin: 0;
@@ -1680,6 +1688,9 @@ focus  {
     #experience {
         padding: 30px 0px 0px 0px;
     }
+    #experience h1 {
+        padding: 10px 0px 0px 0px;
+    }
 
 
     #email-button {
@@ -1704,7 +1715,7 @@ focus  {
     }
 
     #email-button:focus {
-        border-bottom: 0px solid gray;
+        border-bottom: none;
 
     }
 
