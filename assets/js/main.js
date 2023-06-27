@@ -377,24 +377,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-    window.onscroll = function() {
-      var viewCVButton = document.getElementById("view-cv-button");
-      var viewCVElement = document.getElementById("view-cv");
-
-      if (isElementInViewport(viewCVElement)) {
-        viewCVButton.style.display = "block";
-      } else {
-        viewCVButton.style.display = "none";
-      }
-    };
-
-    function isElementInViewport(element) {
-      var rect = element.getBoundingClientRect();
-
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-      }
+   
