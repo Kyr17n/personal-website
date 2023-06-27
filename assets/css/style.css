@@ -133,16 +133,15 @@
 a.button {
     background-color: gray;
     color: white;
-    display: inline;
-    padding: 8px 20px;
-    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    
     margin-right: 10px;
     font-size: 14px;
   }
   
   a.button:hover, focus{
-  text-decoration: none;
-  border-bottom: 0px;
+  border: none;
   }
     
 
@@ -610,7 +609,10 @@ font-size: 16px;
 
 #logo-image {
     /* width: 2em; */
-    height: 2em;
+    color: #fff;
+    /* height: 2em; */
+    text-decoration: none;
+    margin: 0px;
 }
 
 
@@ -994,13 +996,14 @@ focus  {
     .filter-button:focus {
         outline: none;
         color: #ffffff;
-        border: 1px solid gray;
-        background-color: #000;
+        border: 1px solid #e34234;
+        background-color: #e34234;
     }
 
     .filter-button:hover {
         text-decoration: underline;
-        background-color: #000000;
+        background-color: #e34234;
+        color: #fff;
     }
 
     /* .filter active {
@@ -1050,7 +1053,10 @@ focus  {
         }
 
        
-
+        .project-name{
+            color: white;
+    
+        }
 
 
         /* .navigation-list__item {
@@ -1128,7 +1134,7 @@ focus  {
         padding: 10px;
         border: 2px solid #e34234;
         background-color: #e34234;
-        color: #fff;
+        color:#e0dede;
         cursor: pointer;
     }
 
@@ -1213,7 +1219,11 @@ focus  {
         margin-left: 15px;
     } */
 
+    .navigation-list {
+        list-style-type: none;
+        display: none
 
+    }
 
     .info {
         list-style-type: none;
@@ -1321,7 +1331,7 @@ focus  {
         display: flex;
         flex-direction: column;
         background-color: rgba(128, 128, 128, 0.195);
-        padding: 50px 20px 60px 20px;
+        padding: 20px 20px 20px 20px;
         flex: 1 1 500px;
         /* margin-top: 100px; */
     }
@@ -1406,15 +1416,26 @@ focus  {
         margin-bottom: 10px;
     }
 
-    .page-header {
+   
+
+    /* .page-header__item {
         display: none;
-
-    }
-
-    .page-header__item {
         flex: 0 1 50px;
 
 
+    } */
+    #nav-list{
+        display: none;
+    }
+    .page-header {
+        background-color: black;
+        display: flex;
+        width: 100%;
+        padding: 10px 20px 10px 20px;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    
     }
 
     .page-header__item:last-child {
@@ -1492,7 +1513,7 @@ focus  {
     active {
         border: 5px solid gray;
     }
-
+   
     .project-name:hover,
     focus {
         text-decoration: underline;
