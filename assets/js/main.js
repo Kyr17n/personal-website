@@ -276,7 +276,8 @@ document.addEventListener('DOMContentLoaded', function() {
 //   menuOpen = !menuOpen;
 // }
 
-// document.documentElement.style.setProperty('--animate-duration', '3s');
+document.documentElement.style.setProperty('--animate-duration', '3s');
+
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -348,3 +349,52 @@ function resetMenuTimeout() {
     }
   }, 3000); // Set the timeout to 5000 milliseconds (5 seconds)
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('nav a');
+
+  for (const link of navLinks) {
+    link.addEventListener('click', handleNavigation);
+  }
+
+  function handleNavigation(e) {
+    const targetId = this.getAttribute('href');
+
+    // Check if the link is the "Resume" link
+    if (this.classList.contains('navigation-list__item--resume')) {
+      // The link is the "Resume" link, open it in a new tab
+      return;
+    }
+
+    e.preventDefault();
+
+    const targetSection = document.querySelector(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+});
+
+
+    window.onscroll = function() {
+      var viewCVButton = document.getElementById("view-cv-button");
+      var viewCVElement = document.getElementById("view-cv");
+
+      if (isElementInViewport(viewCVElement)) {
+        viewCVButton.style.display = "block";
+      } else {
+        viewCVButton.style.display = "none";
+      }
+    };
+
+    function isElementInViewport(element) {
+      var rect = element.getBoundingClientRect();
+
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+      }
