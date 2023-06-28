@@ -144,7 +144,7 @@
     border: none;
     border-radius: 0px;
     background: none;
-    color: #808080;
+    color: #000000;
     cursor: pointer;
 }
 
@@ -178,13 +178,16 @@
         text-decoration: none;
        
     }
-
+    .project-name{
+        color: white;
+    
+    }
     .navigation-list__item:hover,
     .navigation-list__item:focus {
 
         color: rgb(255, 255, 255);
         text-decoration: none;
-        border-bottom: 2px solid rgb(255, 255, 255);
+        border-bottom: 2px solid #e34234;
     }
 
     .navigation-list__item--active {
@@ -202,6 +205,35 @@
     .navigation-list li {
         display: inline-block;
         margin-left: 15px;
+    }
+    #filter-buttons {
+        display: inline-block;
+        background-color: rgba(128, 128, 128, 0.195);
+        margin-bottom: 20px;
+    }
+
+    .filter-button {
+        margin: 0px;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 0px;
+        background: none;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .filter-button:focus {
+        outline: none;
+        color: #ffffff;
+        border: 1px solid #e34234;
+        background-color: #e34234;
+    }
+
+    .filter-button:hover {
+        text-decoration: underline;
+        background-color: #e34234;
+        color: #fff;
+        text-decoration: none;
     }
 
 }
@@ -564,7 +596,7 @@ font-size: 18px;
 }
 
 .page-header {
-    background-color: black;
+    background-color: #1f1f1f;
     display: flex;
     width: 100%;
     padding: 20px 50px 20px 50px;
@@ -816,11 +848,39 @@ padding: 50px 50px 50px 50px;
 }
 
 .experience-section {
-    margin-top: 10;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 1000px;
+    /* border: 1px solid gray; */
+    background-color: rgba(128, 128, 128, 0.074);
+    max-width: 1000px;
+    max-height: auto;
     padding: 20px;
+    min-width: 250px;
+}
+
+
+
+.skills-column {
+    /* margin-right: 40px; */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 1000px;
+    /* border: 1px solid gray; */
+    background-color: rgba(128, 128, 128, 0.074);
+    max-width: 1000px;
+    max-height: 500px;
+    padding: 20px;
+    min-width: 250px;
+
+
 }
 .experience-section h2{
     padding-bottom: 10px;
+}
+.experience-section h2 span{
+       
+    font-style: italic;
 }
 .experience__item {
     margin-bottom: 30px;
@@ -832,9 +892,10 @@ padding: 50px 50px 50px 50px;
 
 }
 .experience-section:first-child{
-    padding-left: 0px;
-
+       
+   margin-right: 40px;
 }
+
 /* .experience-container {
     margin-bottom: 60px;
 } */
@@ -966,6 +1027,14 @@ focus  {
         z-index: 9999;
     }
 
+    .thanks{
+        width: 100%;
+        text-align: center;
+        padding: 0px 0px 30px 0px;
+        font-size: 25px;
+        margin: 0;
+    }
+    
 
     #typed-text {
         border-bottom: 2px solid #e34234;
@@ -1004,7 +1073,7 @@ focus  {
         border: none;
         border-radius: 0px;
         background: none;
-        color: #808080;
+        color: #000000;
         cursor: pointer;
     }
 
@@ -1073,7 +1142,35 @@ focus  {
     
         }
 
-
+        #filter-buttons {
+            display: inline-block;
+            background-color: rgba(128, 128, 128, 0.195);
+            margin-bottom: 20px;
+        }
+    
+        .filter-button {
+            margin: 0px;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 0px;
+            background: none;
+            color: #ffffff;
+            cursor: pointer;
+        }
+    
+        .filter-button:focus {
+            outline: none;
+            color: #ffffff;
+            border: 1px solid #e34234;
+            background-color: #e34234;
+        }
+    
+        .filter-button:hover {
+            text-decoration: underline;
+            background-color: #e34234;
+            color: #fff;
+            text-decoration: none;
+        }
         /* .navigation-list__item {
             font-size: 16px;
             color: #808080;
@@ -1335,6 +1432,7 @@ focus  {
 
     .toggle-container__row p {
         font-size: 16px;
+        text-align: center;
 
     }
 
@@ -1689,6 +1787,11 @@ focus  {
         padding-bottom: 10px;
         margin: 0;
         font-size: 16px;
+    
+    }
+    .experience-section h2 span{
+       
+        font-style: italic;
     }
     .experience-section h3{
 
