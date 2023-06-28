@@ -36,6 +36,7 @@
         </div>
         <ul class="menu-items">
             <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#work">Work</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -45,13 +46,16 @@
 
         <!-- <img src="assets/img/logo.svg" id="logo-image" class="page-header__item" alt="kyrian logo image"> -->
 
+
         <nav class="page-header__item">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
                     <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
                 </li>
-                
-
+                <li role="presentation">
+                    <a href="index.html#work" role="menuitem"
+                        class="navigation-list__item navigation-list__item--active ">Work</a>
+                </li>
                 <li role="presentation">
                     <a href="index.html#contact" role="menuitem" class="navigation-list__item navigation-list__item--active ">Get
                         In Touch</a>
@@ -60,7 +64,6 @@
             </ul>
         </nav>
     </header>
-
 
 
     <div class="toggle-container__column">
@@ -83,7 +86,7 @@
     </div>
 
     <button onclick="scrollToTop()" id="backToTopBtn">
-        <i class="fas fa-arrow-up"></i> &nbsp;back top
+        <i class="fas fa-arrow-up"></i>
     </button>
     <main class="main">
 
@@ -99,7 +102,7 @@
                     <img src="assets/img/projects/Sendit/Artboard 2.jpg" alt=" sketch " width="100%" height="auto">
                     <img src="assets/img/projects/Sendit/Artboard 3.jpg" alt=" sketch " width="100%" height="auto">
                     <img src="assets/img/projects/Sendit/Artboard 4.jpg" alt=" sketch " width="100%" height="auto">
-                    <img src="assets/img/projects/Sendit/Artboard 5.jpg" alt=" sketch " width="100%" height="auto">
+                    <img src="assets/img/projects/Sendit/Artboard 5.gif" alt=" sketch " width="100%" height="auto">
                     <img src="assets/img/projects/Sendit/Artboard 6.jpg" alt=" sketch " width="100%" height="auto">
                     <h1 class="thanks">Thanks for watching</h1>
                 </div>
@@ -108,6 +111,115 @@
             </div>
         </section>
 
+        <section id="other-projects">
+            <h1>OTHER PROJECTS</h1>
+            <div id="filter-buttons">
+                <button class="filter-button active" data-category="all">All</button>
+                <button class="filter-button active" data-category="ui-design">Design</button>
+                <button class="filter-button active" data-category="development">Dev.</button>
+            </div>
+            <div class="project">
+                <ul class="project-list">
+                    <li class="item" data-category="ui-design">
+                        <div class="project__item">
+                            <div class="hvr-pulse-shrink">
+                                <a href="vault.html" class="text-padding project-name"> <img
+                                        src="assets/img/projects/Vault/vault-cover.png" class="project-image-cover"
+                                        alt="kyrian hero image" width="100%" height="100%"> Vault App</a>
+                                <p class="text-padding">Product Design</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="project-list">
+                    <li class="item" data-category="ui-design">
+                        <div class="project__item">
+
+                            <div class="hvr-pulse-shrink">
+                                <a href="sendit.html" class="text-padding project-name"> <img
+                                        src="assets/img/projects/Sendit/sendit-cover.png" class="project-image-cover"
+                                        alt="kyrian hero image" width="100%" height="100%"> SendIT App</a>
+                                <p class="text-padding">Product Design</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="project-list">
+                    <li class="item" data-category="ui-design">
+                        <div class="project__item">
+
+                            <div class="hvr-pulse-shrink">
+                                <a href="comxo.html" class="text-padding project-name "> <img
+                                        src="assets/img/projects/Comxo/comxo-cover.png" class="project-image-cover "
+                                        alt="kyrian hero image" width="100%" height="100%"> ComXo Rebrand</a>
+                                <p class="text-padding">Web Design</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+
+
+            <div class="project">
+                <ul class="project-list">
+                    <li class="item" data-category="development">
+                        <div class="project__item">
+
+                            <div>
+                                <a href="#" class="text-padding project-name"> <img src="assets/img/projects/website/website-cover.png" class="project-image-cover"
+                                        alt="kyrian hero image" width="100%" height="100%"> Personal Website</a>
+                                <p class="text-padding">Web Development</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="project-list">
+                    <li class="item" data-category="ui-design">
+                        <div class="project__item">
+                            <div class="hvr-pulse-shrink">
+                                <a href="oldfashioned.html" class="text-padding project-name"> <img
+                                        src="assets/img/projects/Oldfashioned/oldfashioned-cover.png"
+                                        class="project-image-cover" alt="kyrian hero image" width="100%" height="100%">
+                                    Oldfashioned App</a>
+                                <p class="text-padding">Product Design</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="project">
+                <!-- <ul class="project-list">
+                    <li class="item" data-category="development">
+                        <div class="project__item">
+
+                            <div>
+                                <a href="#" class="text-padding project-name"> <img src="assets/img/projects/website/website-cover.png" class="project-image-cover"
+                                        alt="kyrian hero image" width="100%" height="100%"> Personal Website</a>
+                                <p class="text-padding">Web Development</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul> -->
+                <!-- <ul class="project-list">
+                    <li class="item" data-category="development">
+                        <div class="project__item">
+
+                            <div>
+                                <a href="#" class="text-padding project-name"> <img src="assets/img/blue_shades_color.png" class="project-image-cover"
+                                        alt="kyrian hero image" width="100%" height="100%"> See project on GitHub</a>
+                                <p class="text-padding">Web Development</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul> -->
+            </div>
+
+        </section>
 
 
 
@@ -145,7 +257,7 @@
             <div class="social-media">
                 <div class="page-footer">
                     <p>Email: Kyr17n@icloud.com</p>
-                    <a class="hvr-grow" href="tel:447564783844" >Contact Us&nbsp;<i class="fas fa-phone"></i></a>
+                    <a class="hvr-grow" href="tel:447564783844" >CONTACT US&nbsp;<i class="fas fa-phone"></i></a>
                 </div>
 
                 <!-- <p class="page-footer__paragraph"> Find me on</p> -->

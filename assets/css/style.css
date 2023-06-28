@@ -130,21 +130,7 @@
         opacity: 1;
     }
 }
-a.button {
-    display: none;
-    background-color: gray;
-    color: white;
-    display: inline-block;
-    padding: 10px 20px;
-    
-    margin-right: 10px;
-    font-size: 14px;
-  }
-  
-  a.button:hover, focus{
-  border: none;
-  }
-    
+
 
 #filter-buttons {
     display: inline-block;
@@ -524,6 +510,7 @@ font-size: 18px;
 
 }
 
+
 #about-heading {
     padding: 50px 0px 20px 0px;
 }
@@ -538,6 +525,11 @@ font-size: 18px;
 #work h1 {
     padding: 10px 0px 0px 0px;
 }
+#other-projects{
+    padding: 70px 0px 20px 0px;
+}
+
+
 /* 
 .about-detail {
     max-width: 100;
@@ -834,6 +826,15 @@ padding: 50px 50px 50px 50px;
     margin-bottom: 30px;
 }
 
+.experience-section-column{
+    display: flex;
+    justify-content: space-between;
+
+}
+.experience-section:first-child{
+    margin-right: 50px;
+
+}
 /* .experience-container {
     margin-bottom: 60px;
 } */
@@ -841,6 +842,7 @@ padding: 50px 50px 50px 50px;
 .experience-container1 {
     margin-bottom: 0px;
 }
+
 
 #experience {
     padding: 50px 0px 0px 0px;
@@ -1396,6 +1398,10 @@ focus  {
         padding: 30px 0px 20px 0px;
     }
 
+    #other-projects{
+        padding: 30px 0px 20px 0px;
+    }
+    
     /* 
     .about-detail {
         max-width: 100;
@@ -1658,6 +1664,17 @@ focus  {
     #skills h1{
         padding: 10px 0px 0px 0px;
     }
+
+    .experience-section-column{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+    /* .experience-section:first-child{
+        margin-right: 50px;
+    
+    } */
     .experience-section {
         margin: 0;
         padding: 0;
