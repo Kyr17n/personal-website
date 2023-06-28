@@ -1779,9 +1779,10 @@ focus  {
         margin-right: 50px;
     
     } */
+    
     .experience-section {
         margin: 0;
-        padding: 0;
+        padding: 20px;
     }
     .experience-section h2{
         padding-bottom: 10px;
@@ -1797,6 +1798,10 @@ focus  {
 
         font-size: 14px;
         margin: 0px;
+    }
+    .experience-section:first-child{
+       margin-right: 0px;
+        margin-bottom: 40px;
     }
 
     .experience__item {
