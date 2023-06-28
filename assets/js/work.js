@@ -97,3 +97,29 @@ navigationItems.forEach(item => {
     item.classList.add('navigation-list__item--active');
   });
 });
+
+// Filter project items
+function filterProjects(category) {
+  const projectItems = document.querySelectorAll('.item');
+
+  projectItems.forEach((item) => {
+    const itemCategory = item.dataset.category;
+
+    if (category === 'all' || category === itemCategory) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+// Get filter buttons
+const filterButtons = document.querySelectorAll('.filter-button');
+
+// Add click event listeners to filter buttons
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const category = button.dataset.category;
+    filterProjects(category);
+  });
+});
