@@ -817,7 +817,7 @@ padding: 50px 50px 50px 50px;
 
 .experience-section {
     margin-top: 10;
-    padding-top: 20px;
+    padding: 20px;
 }
 .experience-section h2{
     padding-bottom: 10px;
@@ -832,7 +832,7 @@ padding: 50px 50px 50px 50px;
 
 }
 .experience-section:first-child{
-    margin-right: 50px;
+    padding-left: 0px;
 
 }
 /* .experience-container {
@@ -840,9 +840,15 @@ padding: 50px 50px 50px 50px;
 } */
 
 .experience-container1 {
+    list-style-type: none;
+    padding: 0px;
     margin-bottom: 0px;
 }
-
+.experience-container {
+    padding: 0px;
+    list-style-type: none;
+    margin-bottom: 0px;
+}
 
 #experience {
     padding: 50px 0px 0px 0px;
@@ -1695,10 +1701,14 @@ focus  {
     }
 
     .experience-container {
-        margin-bottom: 60px;
+        padding: 0px;
+        list-style-type: none;
+        margin-bottom: 40px;
     }
 
     .experience-container1 {
+        padding: 0px;
+        list-style-type: none;
         margin-bottom: 0px;
     }
 
