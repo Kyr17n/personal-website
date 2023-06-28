@@ -671,7 +671,7 @@ font-size: 18px;
     margin: 0px;
     padding: 20px;
     flex: 0 1 100%;
-    max-width: 800px;
+    max-width:550px;
     max-height: auto;
     /* text-align: center; */
 
@@ -850,7 +850,7 @@ padding: 50px 50px 50px 50px;
 .experience-section {
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 1000px;
+    flex-basis: 500px;
     /* border: 1px solid gray; */
     background-color: rgba(128, 128, 128, 0.074);
     max-width: 1000px;
