@@ -13,11 +13,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" type="text/css"
+    <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dark-theme.css">
+
 </head>
 
 
@@ -42,22 +44,26 @@
     </div>
 
     <header class="page-header">
-        <a href="index.html"  alt="kyrian logo image"> <h2 id="logo-image" class="page-header__item animate__animated animate__shakeY"> KYR17N</h2></a>
+        <a href="index.html" alt="kyrian logo image">
+            <h2 id="logo-image" class="page-header__item animate__animated animate__shakeY"> KYR17N</h2>
+        </a>
 
         <!-- <img src="assets/img/logo.svg" id="logo-image" class="page-header__item" alt="kyrian logo image"> -->
 
 
-        <nav class="page-header__item">
+        <nav id="nav-list" class="page-header__item">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
-                    <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+                    <a href="index.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item--active">Home</a>
                 </li>
                 <li role="presentation">
                     <a href="index.html#work" role="menuitem"
                         class="navigation-list__item navigation-list__item--active ">Work</a>
                 </li>
                 <li role="presentation">
-                    <a href="index.html#contact" role="menuitem" class="navigation-list__item navigation-list__item--active ">Get
+                    <a href="index.html#contact" role="menuitem"
+                        class="navigation-list__item navigation-list__item--active ">Get
                         In Touch</a>
                 </li>
 
@@ -72,10 +78,10 @@
         <h2 class="toggle-container__column--h2">VIEWING MODE</h2>
         <div class="toggle-container__row">
 
-            <button id="button_toggle_white" class="toggle-container__row--item"
-                onclick="setBackgroundColor('white')">Light Theme</button>
-            <button id="button_toggle_black" class="toggle-container__row--item"
-                onclick="setBackgroundColor('black')">Dark Theme</button>
+            <button id="button_toggle_white" class="toggle-container__row--item hvr-grow"
+            onclick="setBackgroundColor('white')">Light Theme</button>
+        <button id="button_toggle_black" class="toggle-container__row--item hvr-grow"
+            onclick="setBackgroundColor('black')">Dark Theme</button>
 
             <div class="toggle-container__row--item">
                 <h2 class="text-padding">Pick a Theme</h2>
@@ -93,16 +99,27 @@
 
 
 
-        <section>
-            <h1>ComXo Webiste Rebrand</h1>
-            <h2>  <a href="https://www.comxo.com">Website Url</a></h2>
-                
-                <div>
-                    <!-- <img src="assets/img/projects/Oldfashioned/oldfashionedpg1.png" alt=" sketch " width="100%" height="auto"> -->
-                
-                    <h1 class="thanks">Thanks for watching</h1>
-                </div>
-        
+        <section >
+            <div class="project-title">
+                <h1>Personal Website</h1>
+            </div>
+
+            <div class="project-links">
+            <!-- <h2> <a href="https://www.comxo.com">Website Url</a></h2> -->
+            <p>This was a personal solo project, there was no need for design systems and pixel-perfect mockups.
+                Miro board was ideal for quickly sketching out visual concepts, while the fine-tuning was done during the
+                development process.
+            </p>
+            <a href="#">Github Respository</a>
+           
+            <!-- <img src="assets/img/projects/Oldfashioned/oldfashionedpg1.png" alt=" sketch " width="100%" height="auto"> -->
+            <!-- <h2>Links</h2> -->
+           
+            
+
+                <h1 class="thanks">Thanks for watching</h1>
+            </div>
+
         </section>
 
         <section id="other-projects">
@@ -157,7 +174,7 @@
 
 
             <div class="project">
-                
+
                 <ul class="project-list">
                     <li class="item" data-category="ui-design">
                         <div class="project__item">
@@ -205,29 +222,28 @@
 
 
 
-            <section id="contact">
-                <div class="contact-container">
-                    <h1>Lets Work Together</h1>
-                    <!-- <a href="https://z0pwpeoz02m.typeform.com/to/NMuEanzP" target="_blank" rel="noopener noreferrer">
+        <section id="contact">
+            <div class="contact-container">
+                <h1>Lets Work Together</h1>
+                <!-- <a href="https://z0pwpeoz02m.typeform.com/to/NMuEanzP" target="_blank" rel="noopener noreferrer">
                     Get in touch
                 </a><i class="fas fa-external-link-alt"></i> -->
 
-                    <div class="contact-button__container">
+                <div class="contact-button__container">
 
-                        <a aria-label="Chat on WhatsApp" href="https://wa.me/37067645911" class="whatsapp-button"
-                            target="blank"> <img alt="Chat on WhatsApp"
-                                src="assets/img/svg/WhatsAppButtonGreenLarge.svg" />
-                        </a>
+                    <a aria-label="Chat on WhatsApp" href="https://wa.me/37067645911" class="whatsapp-button"
+                        target="blank"> <img alt="Chat on WhatsApp" src="assets/img/svg/WhatsAppButtonGreenLarge.svg" />
+                    </a>
 
-                        <a id="email-button" href="mailto:kyr17n@gmail.com">Email Me</a>
-                    </div>
-                    <img src="assets/img/QR_code.png" id="qr-code" width="20%" height="20%">
-
+                    <a id="email-button" href="mailto:kyr17n@gmail.com">Email Me</a>
                 </div>
+                <img src="assets/img/QR_code.png" id="qr-code" width="20%" height="20%">
 
-            </section>
+            </div>
 
-        
+        </section>
+
+
     </main>
 
     <footer class="page-footer1">
@@ -238,7 +254,7 @@
             <div class="social-media">
                 <div class="page-footer">
                     <p>Email: Kyr17n@icloud.com</p>
-                    <a class="hvr-grow" href="tel:447564783844" >CONTACT US&nbsp;<i class="fas fa-phone"></i></a>
+                    <a class="hvr-grow" href="tel:447564783844">CONTACT US&nbsp;<i class="fas fa-phone"></i></a>
                 </div>
                 <!-- <p class="page-footer__paragraph"> Find me on</p> -->
                 <a href="https://www.linkedin.com/in/kyrianokeke/" target="blank">
@@ -282,9 +298,9 @@
 
 
     <script src="assets/js/work.js"></script>
-    
+
     <script src="assets/js/vanta.globe.min.js"></script>
-    
+
 </body>
 
 </html>

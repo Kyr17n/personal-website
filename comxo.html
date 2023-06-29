@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dark-theme.css">
 </head>
 
 
@@ -48,7 +49,7 @@
         <!-- <img src="assets/img/logo.svg" id="logo-image" class="page-header__item" alt="kyrian logo image"> -->
 
 
-        <nav class="page-header__item">
+        <nav  id="nav-list" class="page-header__item">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
                     <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
@@ -73,10 +74,11 @@
         <h2 class="toggle-container__column--h2">VIEWING MODE</h2>
         <div class="toggle-container__row">
 
-            <button id="button_toggle_white" class="toggle-container__row--item"
-                onclick="setBackgroundColor('white')">Light Theme</button>
-            <button id="button_toggle_black" class="toggle-container__row--item"
-                onclick="setBackgroundColor('black')">Dark Theme</button>
+            <button id="button_toggle_white" class="toggle-container__row--item hvr-grow"
+            onclick="setBackgroundColor('white')">Light Theme</button>
+        <button id="button_toggle_black" class="toggle-container__row--item hvr-grow"
+            onclick="setBackgroundColor('black')">Dark Theme</button>
+
 
             <div class="toggle-container__row--item">
                 <h2 class="text-padding">Pick a Theme</h2>
@@ -94,18 +96,20 @@
 
 
 
-        <section>
+        <section class="project-links">
+            <div class="project-title">
             <h1>ComXo Webiste Rebrand</h1>
-            <h2>  <a href="https://www.comxo.com">Website Url</a></h2>
+            </div>
+            <h3> <a href="https://www.comxo.com">Website Url</a></h3>
                 
                 <div>
-                    <!-- <img src="assets/img/projects/Oldfashioned/oldfashionedpg1.png" alt=" sketch " width="100%" height="auto"> -->
+                    <img src="assets/img/projects/Oldfashioned/oldfashionedpg1.png" alt=" sketch " width="100%" height="auto">
                 
                     <h1 class="thanks">Thanks for watching</h1>
                 </div>
-        </section>
+        
 
-        <section id="other-projects">
+        <div id="other-projects">
             <h1>OTHER PROJECTS</h1>
             <!-- <div id="filter-buttons">
                 <button class="filter-button active" data-category="all">All</button>
@@ -201,10 +205,10 @@
                 </ul> -->
             </div>
 
-        </section>
+        </div>
 
 
-            <section id="contact">
+            <div id="contact">
                 <div class="contact-container">
                     <h1>Lets Work Together</h1>
                     <!-- <a href="https://z0pwpeoz02m.typeform.com/to/NMuEanzP" target="_blank" rel="noopener noreferrer">
@@ -223,7 +227,7 @@
                     <img src="assets/img/QR_code.png" id="qr-code" width="20%" height="20%">
 
                 </div>
-
+</div>
             </section>
 
         

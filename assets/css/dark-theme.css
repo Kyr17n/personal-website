@@ -1,0 +1,210 @@
+.body-black {
+    background-color: #1f1f1f;
+    color: #ffffff;
+
+    .navigation-list__item {
+        font-size: 16px;
+        color: #808080;
+        text-decoration: none;
+       
+    }
+    .project-name{
+        color: white;
+    
+    }
+    .navigation-list__item:hover,
+    .navigation-list__item:focus {
+
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        border-bottom: 2px solid #e34234;
+    }
+
+    .navigation-list__item--active {
+
+        color: rgb(255, 255, 255);
+    }
+
+
+    .navigation-list {
+        list-style-type: none;
+        display: inline;
+
+    }
+
+    .navigation-list li {
+        display: inline-block;
+        margin-left: 15px;
+    }
+    #filter-buttons {
+        display: inline-block;
+        background-color: rgba(128, 128, 128, 0.195);
+        margin-bottom: 20px;
+    }
+
+    .filter-button {
+        margin: 0px;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 0px;
+        background: none;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .filter-button:focus {
+        outline: none;
+        color: #ffffff;
+        border: 1px solid #e34234;
+        background-color: #e34234;
+    }
+
+    .filter-button:hover {
+        text-decoration: underline;
+        background-color: #e34234;
+        color: #fff;
+        text-decoration: none;
+    }
+    .project-title {
+        position: sticky;
+        top: 83px; /* Adjust the value to be equal to the height of your page header */
+        background-color: #1f1f1f; /* Adjust the background color if needed */
+        z-index: 999; /* Adjust the z-index as per your requirement */
+        /* Other styles for the sticky element */
+    }
+    .project-links h2, a {
+        
+        color: #fff;
+    }
+    .project-links h2, a:hover {
+        border-bottom: 1px solid white;
+      
+    }
+    
+   
+}
+
+
+
+
+
+
+@media  screen and (min-width: 769px) {
+    .main {
+        padding-left: 50px;
+        padding-right: 50px;
+
+    }
+
+    .toggle-container__column {
+
+        padding: 50px 50px 50px 50px;
+
+    }
+
+}
+
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+    .body-black {
+        
+        background-color: #1f1f1f;
+        color: #ffffff;
+        line-height: 1.9;
+        font-size: 16px;
+
+        .menu-items {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #000000;
+            padding: 10px;
+            list-style: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            border: 1px solid #808080;
+            ;
+        }
+
+        .menu-items.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .menu-items li {
+            margin-bottom: 10px;
+        }
+
+        .menu-items li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .menu-items li a:hover {
+            color: #ffffff;
+        }
+
+       
+        .project-name{
+            color: white;
+    
+        }
+
+        #filter-buttons {
+            display: inline-block;
+            background-color: rgba(128, 128, 128, 0.195);
+            margin-bottom: 20px;
+        }
+    
+        .filter-button {
+            margin: 0px;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 0px;
+            background: none;
+            color: #ffffff;
+            cursor: pointer;
+        }
+    
+        .filter-button:focus {
+            outline: none;
+            color: #ffffff;
+            border: 1px solid #e34234;
+            background-color: #e34234;
+        }
+    
+        .filter-button:hover {
+            text-decoration: underline;
+            background-color: #e34234;
+            color: #fff;
+            text-decoration: none;
+        }
+       
+        .project-title {
+            position: sticky;
+            top: 61px; /* Adjust the value to be equal to the height of your page header */
+            background-color: #1f1f1f; /* Adjust the background color if needed */
+            z-index: 999; /* Adjust the z-index as per your requirement */
+            /* Other styles for the sticky element */
+        }
+        .project-list a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .project-list a:hover {
+            border-bottom: none;
+        
+        }
+        .project-name:hover,
+        focus {
+            text-decoration: underline;
+           
+        
+        }
+       
+    }
+   
+}

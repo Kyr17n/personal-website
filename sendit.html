@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dark-theme.css">
 </head>
 
 
@@ -49,7 +50,7 @@
         <!-- <img src="assets/img/logo.svg" id="logo-image" class="page-header__item" alt="kyrian logo image"> -->
 
 
-        <nav class="page-header__item">
+        <nav id="nav-list" class="page-header__item">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
                     <a href="index.html" role="menuitem"
@@ -74,11 +75,11 @@
         <!-- <div id="popup" class="popup-message">Scroll up to change to black theme☝🏽</div> -->
         <h2 class="toggle-container__column--h2">VIEWING MODE</h2>
         <div class="toggle-container__row">
+            <button id="button_toggle_white" class="toggle-container__row--item hvr-grow"
+            onclick="setBackgroundColor('white')">Light Theme</button>
+        <button id="button_toggle_black" class="toggle-container__row--item hvr-grow"
+            onclick="setBackgroundColor('black')">Dark Theme</button>
 
-            <button id="button_toggle_white" class="toggle-container__row--item"
-                onclick="setBackgroundColor('white')">Light Theme</button>
-            <button id="button_toggle_black" class="toggle-container__row--item"
-                onclick="setBackgroundColor('black')">Dark Theme</button>
 
             <div class="toggle-container__row--item">
                 <h2 class="text-padding">Pick a Theme</h2>
@@ -97,7 +98,9 @@
 
 
         <section>
+            <div class="project-title">
             <h1 class="skills-h1"> SendIT App</h1>
+            </div>
             <div>
                 <!-- <h2> Tools|Tech Skills</h2> -->
 
