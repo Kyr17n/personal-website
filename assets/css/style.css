@@ -539,15 +539,10 @@ font-size: 18px;
     margin: 0px;  
 }
 #logo-image:hover span{
-    border: 2px solid #ffffff;
     color:  rgb(255, 255, 255)
     
 }
-#logo-image span{
-    border: 2px solid #e34234;
-    padding: 2px;
-    margin: 2px;
-    
+#logo-image span{  
     color:  #e34234;
     
 }
