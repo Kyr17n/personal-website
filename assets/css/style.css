@@ -532,12 +532,21 @@ font-size: 18px;
    text-decoration: none;
     margin: 0px;  
 }
-#logo-image:hover span{
+#logo-image:hover {
     
-    color:  gray
+    color: #e34234;
+   text-decoration: none;
+    margin: 0px;  
+}
+#logo-image:hover span{
+    border: 2px solid #ffffff;
+    color:  rgb(255, 255, 255)
     
 }
 #logo-image span{
+    border: 2px solid #e34234;
+    padding: 2px;
+    margin: 2px;
     
     color:  #e34234;
     
