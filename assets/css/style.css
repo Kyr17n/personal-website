@@ -479,6 +479,16 @@ font-size: 18px;
     align-items: center;
   
 }
+.page-header a {
+    text-decoration: none;
+     
+}
+
+.page-header a:hover, focus {
+    border-bottom: none;
+   
+     
+}
 
 .page-header__item {
     flex: 0 1 50px;
@@ -519,10 +529,20 @@ font-size: 18px;
 #logo-image {
     
     color: #fff;
-   
-    text-decoration: none;
-    margin: 0px;
+   text-decoration: none;
+    margin: 0px;  
 }
+#logo-image:hover span{
+    
+    color:  gray
+    
+}
+#logo-image span{
+    
+    color:  #e34234;
+    
+}
+
 
 .project {
 
@@ -859,7 +879,7 @@ focus  {
 @media screen and (max-width: 768px) {
     .project-title {
         position: sticky;
-        top: 60px; /* Adjust the value to be equal to the height of your page header */
+        top: 58px; /* Adjust the value to be equal to the height of your page header */
         background-color: #ffffff; /* Adjust the background color if needed */
         z-index: 999; /* Adjust the z-index as per your requirement */
         /* Other styles for the sticky element */
@@ -1245,10 +1265,6 @@ focus  {
     }
 
 
-    #logo-image {
-        /* width: 2em; */
-        height: 2em;
-    }
 
 
     .project {
@@ -1466,13 +1482,13 @@ focus  {
 
     .experience-container {
         padding: 0px;
-        list-style-type: none;
+       
         margin-bottom: 40px;
     }
 
     .experience-container1 {
         padding: 0px;
-        list-style-type: none;
+       
         margin-bottom: 0px;
     }
 
