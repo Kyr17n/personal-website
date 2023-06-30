@@ -232,11 +232,11 @@ a:active {
     text-decoration: none;
     border-bottom: 2px solid #e34234;
 }
-
+/* 
 .navigation-list__item--active {
 
     color: rgb(255, 255, 255);
-}
+} */
 
 
 .navigation-list {
@@ -436,9 +436,12 @@ font-size: 18px;
     padding: 10px 0px 0px 0px;
 }
 #other-projects{
-    padding: 70px 0px 20px 0px;
+    padding: 100px 0px 20px 0px;
 }
-
+#other-projects h1{
+      
+    font-size: 24px;
+}
 .page-footer1 {
     width: 100%;
     color: #ffffff;
@@ -459,6 +462,7 @@ font-size: 18px;
 
 .page-footer p {
     margin-bottom: 0px;
+    font-weight: 700;
 }
 
 .page-footer a {
@@ -532,20 +536,14 @@ font-size: 18px;
    text-decoration: none;
     margin: 0px;  
 }
-#logo-image:hover {
-    
-    color: #e34234;
-   text-decoration: none;
-    margin: 0px;  
-}
+ 
+
 #logo-image:hover span{
-    color:  rgb(255, 255, 255)
+    color:   #e34234;
+    
     
 }
-#logo-image span{  
-    color:  #e34234;
-    
-}
+
 
 
 .project {
@@ -851,7 +849,7 @@ focus  {
 
 .thanks{
     width: 100%;
-    text-align: center;
+    text-align: left;
     padding: 0px 0px 30px 0px;
     font-size: 40px;
     margin: 0;
@@ -905,7 +903,7 @@ focus  {
 
     .thanks{
         width: 100%;
-        text-align: center;
+        text-align: left;
         padding: 0px 0px 30px 0px;
         font-size: 25px;
         margin: 0;
@@ -1196,9 +1194,13 @@ focus  {
     }
 
     #other-projects{
-        padding: 30px 0px 20px 0px;
+        padding: 50px 0px 20px 0px;
     }
     
+    #other-projects h1{
+      
+        font-size: 18px;
+    }
     /* 
     .about-detail {
         max-width: 100;
