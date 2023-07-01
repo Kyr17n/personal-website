@@ -6,12 +6,14 @@
         font-size: 16px;
         color: #808080;
         text-decoration: none;
-       
+
     }
-    .project-name{
+
+    .project-name {
         color: white;
-    
+
     }
+
     .navigation-list__item:hover,
     .navigation-list__item:focus {
 
@@ -36,6 +38,7 @@
         display: inline-block;
         margin-left: 15px;
     }
+
     #filter-buttons {
         display: inline-block;
         background-color: rgba(128, 128, 128, 0.195);
@@ -65,31 +68,72 @@
         color: #fff;
         text-decoration: none;
     }
+
     .project-title {
         position: sticky;
-        top: 83px; /* Adjust the value to be equal to the height of your page header */
-        background-color: #1f1f1f; /* Adjust the background color if needed */
-        z-index: 999; /* Adjust the z-index as per your requirement */
+        top: 83px;
+        /* Adjust the value to be equal to the height of your page header */
+        background-color: #1f1f1f;
+        /* Adjust the background color if needed */
+        z-index: 999;
+        /* Adjust the z-index as per your requirement */
         /* Other styles for the sticky element */
     }
-    .project-links h2, a {
-        
+
+    .project-links h2,
+    a {
+
         color: #fff;
     }
-    .project-links h2, a:hover {
+
+    .project-links h2,
+    a:hover {
         border-bottom: 1px solid white;
-      
+
     }
+
     .page-header a {
         text-decoration: none;
-         
+
     }
-    
+
     .page-header a:hover {
         text-decoration: none;
         border-bottom: none;
-         
+
     }
+
+    .page-footer {
+        flex: 1 1 500px;
+    }
+    
+    .page-footer p {
+        margin-bottom: 0px;
+        font-weight: 700;
+    }
+    
+    .page-footer a {
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+       
+    }
+    .social-media__item {
+        justify-content: space-between;
+        margin: 10px;
+        fill: white;
+        text-decoration: none;
+    }
+    .social-media a:hover {
+        border-bottom: none;
+        text-decoration: none;
+    }
+
+    .contact-us a:hover,
+    focus {
+        border-bottom: 1px solid #e34234;
+    }
+
    
 }
 
@@ -98,7 +142,7 @@
 
 
 
-@media  screen and (min-width: 769px) {
+@media screen and (min-width: 769px) {
     .main {
         padding-left: 50px;
         padding-right: 50px;
@@ -117,7 +161,7 @@
 /* Mobile-specific styles */
 @media screen and (max-width: 768px) {
     .body-black {
-        
+
         background-color: #1f1f1f;
         color: #ffffff;
         line-height: 1.9;
@@ -155,10 +199,10 @@
             color: #ffffff;
         }
 
-       
-        .project-name{
+
+        .project-name {
             color: white;
-    
+
         }
 
         #filter-buttons {
@@ -166,7 +210,7 @@
             background-color: rgba(128, 128, 128, 0.195);
             margin-bottom: 20px;
         }
-    
+
         .filter-button {
             margin: 0px;
             padding: 6px 12px;
@@ -176,44 +220,77 @@
             color: #ffffff;
             cursor: pointer;
         }
-    
+
         .filter-button:focus {
             outline: none;
             color: #ffffff;
             border: 1px solid #e34234;
             background-color: #e34234;
         }
-    
+
         .filter-button:hover {
             text-decoration: underline;
             background-color: #e34234;
             color: #fff;
             text-decoration: none;
         }
-       
+
         .project-title {
             position: sticky;
-            top: 58px; /* Adjust the value to be equal to the height of your page header */
-            background-color: #1f1f1f; /* Adjust the background color if needed */
-            z-index: 999; /* Adjust the z-index as per your requirement */
+            top: 58px;
+            /* Adjust the value to be equal to the height of your page header */
+            background-color: #1f1f1f;
+            /* Adjust the background color if needed */
+            z-index: 999;
+            /* Adjust the z-index as per your requirement */
             /* Other styles for the sticky element */
         }
+
         .project-list a {
             text-decoration: none;
             font-weight: bold;
         }
-        
+
         .project-list a:hover {
             border-bottom: none;
-        
+
         }
+
         .project-name:hover,
         focus {
             text-decoration: underline;
-           
-        
+
+
         }
-       
+
+        .page-footer1 {
+            width: 100%;
+            color: #ffffff;
+            background-color: #000000;
+            padding: 20px 20px 20px 20px;
+            clear: both;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border-top: 1px solid white;
+
+
+
+        }
+
+        .page-footer {
+            flex: 1 1 100px;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            margin-bottom: 10px;
+        }
+
+        .social-media__item {
+            justify-content: space-between;
+            fill: #ededed;
+        }
+
     }
-   
+
 }
