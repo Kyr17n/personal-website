@@ -124,14 +124,22 @@
         fill: white;
         text-decoration: none;
     }
+    .social-media__item:hover,focus {
+        fill:  #e34234;
+        
+    }
     .social-media a:hover {
         border-bottom: none;
         text-decoration: none;
     }
+    .contact-us a {
+        text-decoration: underline;   
+    }
 
     .contact-us a:hover,
     focus {
-        border-bottom: 1px solid #e34234;
+        text-decoration: underline;   
+        color: #e34234;
     }
 
    

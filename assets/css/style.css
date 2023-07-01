@@ -164,7 +164,7 @@
     right: 20px;
     z-index: 99;
     font-size: 16px;
-    padding: 10px 12px;
+    padding: 10px 10px;
     border: 2px solid#e34234;
     background-color: #e34234;
     ;
@@ -507,10 +507,18 @@ button:visited {
     border-bottom: none;
     text-decoration: none;
 }
+.social-media__item:hover,focus {
+    fill:  #e34234;
+    
+}
+.contact-us a {
+    text-decoration: underline;   
+}
 
 .contact-us a:hover,
 focus {
-    border-bottom: 1px solid #e34234;
+    text-decoration: underline;   
+    color: #e34234;
 }
 
 .page-header {
@@ -1675,7 +1683,7 @@ focus {
 
     .hamburger-icon-wrapper {
         background-color: #e34234;
-        padding: 12px 12px;
+        padding: 10px 10px;
         border-radius: 50%;
         border: 2px solid #e34234;
 
