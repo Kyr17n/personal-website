@@ -1639,7 +1639,7 @@ focus {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 20px;
+        width: 18px;
         height: 18px;
         cursor: pointer;
     }
