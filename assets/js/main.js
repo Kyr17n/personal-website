@@ -95,17 +95,17 @@ navigationItems.forEach(item => {
 
 
 
-// // Show the pop-up message after 15 seconds of page load
-// setTimeout(function() {
-//   var popup = document.getElementById('popup');
-//   popup.style.display = 'block';
-// }, 3000);
+// Show the pop-up message after 15 seconds of page load
+setTimeout(function() {
+  var popup = document.getElementById('popup');
+  popup.style.display = 'block';
+}, 3000);
 
-// // Hide the pop-up message when the user scrolls up
-// window.addEventListener('scroll', function() {
-//   var popup = document.getElementById('popup');
-//   popup.style.display = 'none';
-// });
+// Hide the pop-up message when the user scrolls up
+window.addEventListener('scroll', function() {
+  var popup = document.getElementById('popup');
+  popup.style.display = 'none';
+});
 
 
 
