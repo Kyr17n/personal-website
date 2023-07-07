@@ -108,7 +108,7 @@
 
 
 #typed-text {
-    border-bottom: 2px solid #e34234;
+    border-bottom: 1px solid #e34234;
     margin: 0;
 }
 
@@ -998,8 +998,7 @@ focus {
 
 
     #typed-text {
-        border-bottom: 2px solid #e34234;
-        margin: 0;
+        border-bottom: 1px solid #e34234;
     }
 
 
@@ -1355,7 +1354,7 @@ focus {
     .hero-heading {
         display: inline-block;
         margin: 0;
-        margin-bottom: 30px;
+        margin-bottom: 18px;
     }
 
     .hero-heading h1 {
