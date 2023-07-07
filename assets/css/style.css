@@ -98,7 +98,7 @@
     left: 50%;
     transform: translateX(-50%);
     /* background-color: lightgray; */
-    color:  #e34234;
+    color: #e34234;
     /* padding: 10px 20px; */
     border-radius: 5px;
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
@@ -310,10 +310,11 @@ h3 {
     font-weight: 700;
     font-size: 18px;
 }
-h4{
+
+h4 {
     font-family: 'Fasthand', cursive;
-font-family: 'Freehand', cursive;
-font-size: 32px;
+    font-family: 'Freehand', cursive;
+    font-size: 32px;
 }
 
 
@@ -513,17 +514,20 @@ button:visited {
     border-bottom: none;
     text-decoration: none;
 }
-.social-media__item:hover,focus {
-    fill:  #e34234;
-    
+
+.social-media__item:hover,
+focus {
+    fill: #e34234;
+
 }
+
 .contact-us a {
-    text-decoration: underline;   
+    text-decoration: underline;
 }
 
 .contact-us a:hover,
 focus {
-    text-decoration: underline;   
+    text-decoration: underline;
     color: #e34234;
 }
 
@@ -886,9 +890,8 @@ focus {
 
 }
 
-.whatsapp-button:hover,
-focus {
-
+.whatsapp-button:hover {
+    border-radius: 12px;
     border-bottom: none;
 
 }
@@ -958,7 +961,7 @@ focus {
         left: 50%;
         transform: translateX(-50%);
         /* background-color: lightgray; */
-        color:  #e34234;
+        color: #e34234;
         /* padding: 10px 20px; */
         border-radius: 5px;
         /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
@@ -1137,12 +1140,12 @@ focus {
         font-size: 16px;
     }
 
-    h4{
+    h4 {
         font-family: 'Fasthand', cursive;
-    /* font-family: 'Freehand', cursive; */
-    font-size: 28px;
+        /* font-family: 'Freehand', cursive; */
+        font-size: 28px;
     }
-    
+
 
     button {
         border: none;
@@ -1612,25 +1615,24 @@ focus {
 
     }
 
-    .whatsapp-button:hover,
-    focus {
+    .whatsapp-button:hover {
+        text-decoration: none;
+        border: none;
+        padding: 0px;
         border-radius: 12px;
-        color: #000;
 
-        border-bottom: none;
     }
 
     .whatsapp-button:focus {
         border-radius: 12px;
-        border-bottom: 0px solid rgb(246, 0, 0);
+        border: none;
 
     }
 
-    /* .whatsapp-button {
-        border-radius: 12px;
-        border-bottom: 1px solid white;
+    .whatsapp-button {
+        border: none;
          
-      } */
+      }
 
     #qr-code {
         display: none;
@@ -1651,7 +1653,7 @@ focus {
         flex-direction: column;
         justify-content: space-between;
         width: 16px;
-        height: 18px;
+        height: 16px;
         cursor: pointer;
     }
 
