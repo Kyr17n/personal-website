@@ -92,16 +92,17 @@
 }
 
 .popup-message {
+    font-family: 'Marck Script', cursive;
     position: fixed;
-    top: 200px;
+    top: 40vh;
     left: 50%;
     transform: translateX(-50%);
-    background-color: lightgray;
-    color: #000000;
-    padding: 10px 20px;
+    /* background-color: lightgray; */
+    color:  #e34234;
+    /* padding: 10px 20px; */
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-size: 16px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+    font-size: 20px;
     z-index: 9999;
 }
 
@@ -308,6 +309,11 @@ h3 {
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 700;
     font-size: 18px;
+}
+h4{
+    font-family: 'Fasthand', cursive;
+font-family: 'Freehand', cursive;
+font-size: 32px;
 }
 
 
@@ -946,16 +952,16 @@ focus {
     }
 
     .popup-message {
+        font-family: 'Marck Script', cursive;
         position: fixed;
-        top: 200px;
-        /* Adjust the value based on the height of your header */
+        top: 38vh;
         left: 50%;
         transform: translateX(-50%);
-        background-color: lightgray;
-        color: #000000;
-        padding: 10px 20px;
+        /* background-color: lightgray; */
+        color:  #e34234;
+        /* padding: 10px 20px; */
         border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
         font-size: 16px;
         z-index: 9999;
     }
@@ -1131,7 +1137,12 @@ focus {
         font-size: 16px;
     }
 
-
+    h4{
+        font-family: 'Fasthand', cursive;
+    /* font-family: 'Freehand', cursive; */
+    font-size: 28px;
+    }
+    
 
     button {
         border: none;
