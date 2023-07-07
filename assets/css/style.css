@@ -314,7 +314,11 @@ h3 {
 h4 {
     font-family: 'Fasthand', cursive;
     font-family: 'Freehand', cursive;
-    font-size: 32px;
+    font-size: 20px;
+    color: #e34234;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 2px;
 }
 
 
@@ -566,9 +570,23 @@ focus {
     text-align: right;
 }
 
-
-
 .hero-heading {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 50px;
+
+}
+
+.hero-heading p {
+    margin: 0;
+    color: #e34234;
+    font-size: 16px;
+    letter-spacing: 3px;
+
+
+}
+
+.hero-heading h1 {
     font-size: 80px;
     padding-top: 20px;
     margin: 0;
@@ -578,10 +596,11 @@ focus {
 }
 
 .hero-paragraph {
-    font-size: 30px;
+    font-size: 25px;
     text-align: left;
     margin: 0;
     letter-spacing: 3px;
+    font-weight: 300;
 }
 
 
@@ -956,8 +975,8 @@ focus {
 
     .popup-message {
         font-family: 'Marck Script', cursive;
-        position: fixed;
-        top: 45vh;
+        position: float;
+        top: 40vh;
         left: 50%;
         transform: translateX(-50%);
         /* background-color: lightgray; */
@@ -1143,7 +1162,11 @@ focus {
     h4 {
         font-family: 'Fasthand', cursive;
         /* font-family: 'Freehand', cursive; */
-        font-size: 28px;
+        font-size: 12px;
+        color: #e34234;
+        text-align: left;
+        margin: 0px;
+        padding: 0px;
     }
 
 
@@ -1329,14 +1352,30 @@ focus {
         fill: #ededed;
     }
 
-
     .hero-heading {
+        display: inline-block;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero-heading h1 {
         font-size: 40px;
         padding-top: 0px;
-        padding-bottom: 10px;
+        /* padding-bottom: 10px; */
         margin: 0;
         text-align: left;
         letter-spacing: 1px;
+    }
+
+
+    .hero-heading p {
+        margin: 0;
+        color: #e34234;
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-weight: 500;
+
+
     }
 
     .hero-paragraph {
@@ -1631,8 +1670,8 @@ focus {
 
     .whatsapp-button {
         border: none;
-         
-      }
+
+    }
 
     #qr-code {
         display: none;
