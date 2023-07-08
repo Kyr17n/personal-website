@@ -1173,11 +1173,10 @@ focus {
         outline: none;
         color: #ffffff;
         background-color: #aa2419;
-        opacity: 0;
     }
 
     .filter-button:hover {
-        text-decoration: underline;
+        text-decoration: none;
         background-color: #aa2419;
         color: #fff;
     }
