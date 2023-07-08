@@ -216,13 +216,12 @@
 .filter-button:focus {
     outline: none;
     color: #ffffff;
-    border: 1px solid #aa2419;
     background-color: #aa2419;
 }
 
 .filter-button:hover {
     text-decoration: none;
-    background-color: #e34234;
+    background-color: #aa2419;
     color: #fff;
 }
 
@@ -406,8 +405,7 @@ button {
 }
 
 
-button:hover,
-button:focus {
+button:hover {
     opacity: 0.8;
     transition: 100ms;
 }
@@ -727,7 +725,7 @@ focus {
 .project-name:hover,
 focus {
     text-decoration: underline;
-
+    border-bottom: none;
 
 }
 
@@ -1155,7 +1153,7 @@ focus {
 
     #filter-buttons {
         display: inline-block;
-        background-color: rgba(128, 128, 128, 0.195);
+        background-color: rgba(128, 128, 128, 0.074);
         margin-bottom: 20px;
     }
 
@@ -1172,8 +1170,8 @@ focus {
     .filter-button:focus {
         outline: none;
         color: #ffffff;
-        border: 1px solid #aa2419;
         background-color: #aa2419;
+        opacity: 0;
     }
 
     .filter-button:hover {
@@ -1318,13 +1316,6 @@ focus {
         border-radius: 3px;
         border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     }
-
-    button:hover,
-    button:focus {
-        opacity: 0.8;
-    }
-
-
 
 
     .profile__portrait {

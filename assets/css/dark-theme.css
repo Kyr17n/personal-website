@@ -13,13 +13,15 @@
         color: white;
 
     }
-
+.project a{
+    border: 0px;
+}
     .navigation-list__item:hover,
     .navigation-list__item:focus {
 
         color: rgb(255, 255, 255);
         text-decoration: none;
-        border-bottom: 2px solid #e34234;
+        border-bottom: 2px solid #aa2419;
     }
 
     .navigation-list__item--active {
@@ -58,13 +60,13 @@
     .filter-button:focus {
         outline: none;
         color: #ffffff;
-        border: 1px solid #e34234;
-        background-color: #e34234;
+        border: 1px solid #aa2419;
+        background-color: #aa2419;
     }
 
     .filter-button:hover {
         text-decoration: underline;
-        background-color: #e34234;
+        background-color: #aa2419;
         color: #fff;
         text-decoration: none;
     }
@@ -112,11 +114,7 @@
         border: none;
     }
 
-    .project-links h2,
-    a:hover {
-        border-bottom: 1px solid white;
-
-    }
+   
 
     .page-header a {
         text-decoration: none;
@@ -154,7 +152,7 @@
 
     .social-media__item:hover,
     focus {
-        fill: #e34234;
+        fill: #aa2419;
 
     }
 
@@ -170,7 +168,7 @@
     .contact-us a:hover,
     focus {
         text-decoration: underline;
-        color: #e34234;
+        color: #aa2419;
     }
 
 
@@ -269,6 +267,7 @@
             color: white;
 
         }
+        
 
         #filter-buttons {
             display: inline-block;
@@ -289,13 +288,13 @@
         .filter-button:focus {
             outline: none;
             color: #ffffff;
-            border: 1px solid #e34234;
-            background-color: #e34234;
+            border: 1px solid #aa2419;
+            background-color: #aa2419;
         }
 
         .filter-button:hover {
             text-decoration: underline;
-            background-color: #e34234;
+            background-color: #aa2419;
             color: #fff;
             text-decoration: none;
         }
@@ -318,6 +317,7 @@
 
         .project-list a:hover {
             border-bottom: none;
+    
 
         }
 
@@ -327,7 +327,11 @@
 
 
         }
-
+        .project-image-cover:hover,
+        focus,
+        active {
+            border: 5px solid gray;
+        }
         .page-footer1 {
             width: 100%;
             color: #ffffff;
