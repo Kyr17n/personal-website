@@ -1036,8 +1036,9 @@ focus {
         color: #ffffff;
       }
       .hero-content1 h1 {
+        padding: 0px 20px;
         letter-spacing: 2px;
-        font-size: 22px;
+        font-size: 20px;
          color: #ffffff;
        }
  
