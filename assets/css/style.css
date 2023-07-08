@@ -77,9 +77,11 @@
   }
 
   .portfolio-button:active {
-  border: none;
+  border-bottom: 0px;
   }
-
+  .portfolio-button:visited {
+    border-bottom: 0px;
+    }
 
 .hvr-grow {
     display: inline-block;
