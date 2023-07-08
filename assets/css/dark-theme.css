@@ -85,6 +85,30 @@
 
         color: #fff;
     }
+  .portfolio-button {
+    display: inline-block;
+    padding:15px 20px;
+    
+    background-color:#aa2419;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    margin-top: 100px;
+    
+    text-transform: uppercase;
+  }
+  
+  .portfolio-button:hover {
+    background-color: #ffffff;
+    color:  #aa2419;
+    border: none;
+  }
+
+  .portfolio-button:active {
+  border: none;
+  }
 
     .project-links h2,
     a:hover {
@@ -206,7 +230,30 @@
         .menu-items li a:hover {
             color: #ffffff;
         }
-
+        .portfolio-button {
+            display: inline-block;
+            padding:6px 20px;
+            
+            background-color:#aa2419;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-size: 14px;
+            margin-top: 100px;
+            
+            text-transform: uppercase;
+          }
+          
+          .portfolio-button:hover {
+            background-color: #ffffff;
+            color:  #aa2419;
+            border: none;
+          }
+        
+          .portfolio-button:active {
+          border: none;
+          }
 
         .project-name {
             color: white;
