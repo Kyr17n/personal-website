@@ -85,30 +85,32 @@
 
         color: #fff;
     }
-  .portfolio-button {
-    display: inline-block;
-    padding:15px 20px;
-    
-    background-color:#aa2419;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    font-size: 14px;
-    margin-top: 100px;
-    
-    text-transform: uppercase;
-  }
-  
-  .portfolio-button:hover {
-    background-color: #ffffff;
-    color:  #aa2419;
-    border: none;
-  }
 
-  .portfolio-button:active {
-  border: none;
-  }
+
+    .portfolio-button {
+        display: inline-block;
+        padding: 15px 20px;
+
+        background-color: #aa2419;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        font-size: 14px;
+        margin-top: 50px;
+
+        text-transform: uppercase;
+    }
+
+    .portfolio-button:hover {
+        background-color: #ffffff;
+        color: #aa2419;
+        border: none;
+    }
+
+    .portfolio-button:active {
+        border: none;
+    }
 
     .project-links h2,
     a:hover {
@@ -130,43 +132,48 @@
     .page-footer {
         flex: 1 1 500px;
     }
-    
+
     .page-footer p {
         margin-bottom: 0px;
         font-weight: 700;
     }
-    
+
     .page-footer a {
         color: #fff;
         font-weight: 700;
         text-decoration: none;
-       
+
     }
+
     .social-media__item {
         justify-content: space-between;
         margin: 10px;
         fill: white;
         text-decoration: none;
     }
-    .social-media__item:hover,focus {
-        fill:  #e34234;
-        
+
+    .social-media__item:hover,
+    focus {
+        fill: #e34234;
+
     }
+
     .social-media a:hover {
         border-bottom: none;
         text-decoration: none;
     }
+
     .contact-us a {
-        text-decoration: underline;   
+        text-decoration: underline;
     }
 
     .contact-us a:hover,
     focus {
-        text-decoration: underline;   
+        text-decoration: underline;
         color: #e34234;
     }
 
-   
+
 }
 
 
@@ -227,33 +234,36 @@
             text-decoration: none;
         }
 
-        .menu-items li a:hover {
-            color: #ffffff;
-        }
         .portfolio-button {
             display: inline-block;
-            padding:6px 20px;
-            
-            background-color:#aa2419;
+            padding: 6px 20px;
+
+            background-color: #aa2419;
             color: #ffffff;
             text-decoration: none;
             border-radius: 4px;
             transition: background-color 0.3s ease;
             font-size: 14px;
-            margin-top: 100px;
-            
+            margin-top: 50px;
+
             text-transform: uppercase;
-          }
-          
-          .portfolio-button:hover {
+        }
+
+        .portfolio-button:hover {
             background-color: #ffffff;
-            color:  #aa2419;
+            color: #aa2419;
             border: none;
-          }
-        
-          .portfolio-button:active {
-          border: none;
-          }
+        }
+
+        .portfolio-button:active {
+            border: none;
+        }
+    }
+
+
+    .menu-items li a:hover {
+        color: #ffffff;
+
 
         .project-name {
             color: white;

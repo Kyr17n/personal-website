@@ -11,7 +11,7 @@
     display: none;
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     overflow: hidden;
   }
 .hero-container1 {
@@ -20,6 +20,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    margin-top: 50px;
   }
   
   video {
@@ -42,7 +43,7 @@
   }
   
   .hero-content1 h1 {
-    font-size: 48px;
+    font-size: 40px;
     letter-spacing: 2px;
     text-align: center;
     color: #fff;
@@ -64,7 +65,7 @@
     border-radius: 4px;
     transition: background-color 0.3s ease;
     font-size: 14px;
-    margin-top: 100px;
+    margin-top: 50px;
     
     text-transform: uppercase;
   }
@@ -1040,6 +1041,7 @@ focus {
         width: 100%;
         height: 100vh;
         overflow: hidden;
+        margin-top: 30px;
       }
       
       video {
@@ -1054,7 +1056,7 @@ focus {
       
       .hero-content1 {
         position: absolute;
-        top: 48%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -1084,7 +1086,7 @@ focus {
         border-radius: 4px;
         transition: background-color 0.3s ease;
         font-size: 14px;
-        margin-top: 100px;
+        margin-top: 50px;
         
         text-transform: uppercase;
       }
