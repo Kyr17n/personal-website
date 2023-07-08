@@ -18,7 +18,7 @@
     display: block;
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     overflow: hidden;
   }
   
@@ -29,7 +29,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(3px); /* Adjust the blur intensity as desired */
+    filter: blur(1px); /* Adjust the blur intensity as desired */
   }
   
   .hero-content1 {
@@ -42,7 +42,7 @@
   }
   
   .hero-content1 h1 {
-    font-size: 38px;
+    font-size: 48px;
     letter-spacing: 2px;
     text-align: center;
     color: #fff;
@@ -52,6 +52,25 @@
     letter-spacing: 2px;
     text-align: center;
     color: #fff;
+  }
+
+  .portfolio-button {
+    display: inline-block;
+    padding: 6px 20px;
+    background-color: #ffffff;
+    color:  #aa2419;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    margin-top: 100px;
+    
+    text-transform: uppercase;
+  }
+  
+  .portfolio-button:hover {
+    background-color:#aa2419;
+    color: #ffffff;
   }
 
 .hvr-grow {
@@ -142,7 +161,7 @@
     left: 50%;
     transform: translateX(-50%);
     /* background-color: lightgray; */
-    color: #e34234;
+    color: #aa2419;
     /* padding: 10px 20px; */
     border-radius: 5px;
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
@@ -152,7 +171,7 @@
 
 
 #typed-text {
-    border-bottom: 1px solid #e34234;
+    border-bottom: 1px solid #aa2419;
     margin: 0;
 }
 
@@ -189,8 +208,8 @@
 .filter-button:focus {
     outline: none;
     color: #ffffff;
-    border: 1px solid #e34234;
-    background-color: #e34234;
+    border: 1px solid #aa2419;
+    background-color: #aa2419;
 }
 
 .filter-button:hover {
@@ -210,8 +229,8 @@
     z-index: 99;
     font-size: 16px;
     padding: 10px 11px;
-    border: 2px solid#e34234;
-    background-color: #e34234;
+    border: 2px solid#aa2419;
+    background-color: #aa2419;
     ;
     color: #fff;
     cursor: pointer;
@@ -287,7 +306,7 @@ a:active {
 
     color: rgb(255, 255, 255);
     text-decoration: none;
-    border-bottom: 2px solid #e34234;
+    border-bottom: 2px solid #aa2419;
 }
 
 /* 
@@ -359,7 +378,7 @@ h4 {
     font-family: 'Fasthand', cursive;
     font-family: 'Freehand', cursive;
     font-size: 20px;
-    color: #e34234;
+    color: #aa2419;
     margin: 0px;
     padding: 0px;
     letter-spacing: 2px;
@@ -566,7 +585,7 @@ button:visited {
 
 .social-media__item:hover,
 focus {
-    fill: #e34234;
+    fill: #aa2419;
 
 }
 
@@ -577,7 +596,7 @@ focus {
 .contact-us a:hover,
 focus {
     text-decoration: underline;
-    color: #e34234;
+    color: #aa2419;
 }
 
 .page-header {
@@ -624,7 +643,7 @@ focus {
 
 .hero-heading p {
     margin: 0;
-    color: #e34234;
+    color: #aa2419;
     font-size: 16px;
     letter-spacing: 3px;
 
@@ -658,7 +677,7 @@ focus {
 
 
 #logo-image:hover span {
-    color: #e34234;
+    color: #aa2419;
 
 
 }
@@ -1023,12 +1042,12 @@ focus {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: blur(3px)
+        filter: blur(1px)
       }
       
       .hero-content1 {
         position: absolute;
-        top: 50%;
+        top: 48%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -1038,7 +1057,7 @@ focus {
       .hero-content1 h1 {
         padding: 0px 20px;
         letter-spacing: 2px;
-        font-size: 20px;
+        font-size: 30px;
          color: #ffffff;
        }
  
@@ -1048,7 +1067,26 @@ focus {
         color: #ffffff;
       }
 
-
+      .portfolio-button {
+        display: inline-block;
+        padding: 6px 20px;
+        background-color: #ffffff;
+        color: #aa2419;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        font-size: 14px;
+        margin-top: 100px;
+        /* border: 2px solid #e34234; */
+        text-transform: uppercase;
+      }
+      
+      .portfolio-button:hover {
+        
+        background-color: #aa2419;
+        color: #ffffff;
+      }
+      
     .project-title {
         position: sticky;
         top: 58px;
@@ -1085,7 +1123,7 @@ focus {
 
 
     #typed-text {
-        border-bottom: 1px solid #e34234;
+        border-bottom: 1px solid #aa2419;
     }
 
 
@@ -1120,13 +1158,13 @@ focus {
     .filter-button:focus {
         outline: none;
         color: #ffffff;
-        border: 1px solid #e34234;
-        background-color: #e34234;
+        border: 1px solid #aa2419;
+        background-color: #aa2419;
     }
 
     .filter-button:hover {
         text-decoration: underline;
-        background-color: #e34234;
+        background-color: #aa2419;
         color: #fff;
     }
 
@@ -1249,7 +1287,7 @@ focus {
         font-family: 'Marck Script', cursive;
         /* font-family: 'Freehand', cursive; */
         font-size: 12px;
-        color: #e34234;
+        color: #aa2419;
         text-align: center;
         margin: 0px;
         padding: 0px;
@@ -1426,6 +1464,7 @@ focus {
         position: fixed;
         top: 0;
         z-index: 999;
+        border-bottom: 1px solid #aa2419;
 
     }
 
@@ -1457,7 +1496,7 @@ focus {
 
     .hero-heading p {
         margin: 0;
-        color: #e34234;
+        color: #aa2419;
         font-size: 10px;
         letter-spacing: 2px;
         font-weight: 500;
@@ -1821,10 +1860,10 @@ focus {
     }
 
     .hamburger-icon-wrapper {
-        background-color: #e34234;
+        background-color: #aa2419;
         padding: 10px 10px;
         border-radius: 50%;
-        border: 2px solid #e34234;
+        border: 2px solid #aa2419;
 
     }
 
