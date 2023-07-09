@@ -386,5 +386,5 @@ document.querySelector('.portfolio-button').addEventListener('click', function(e
 
 
 //PLAYS VIDEO IN LOW POWER MODE
-$('video').addClass('inlinevideo');
-$('body').on('click touchstart', function ()  {var videoElement = document.getElementsByClassName('inlinevideo');if (videoElement.playing) {} else {$('.inlinevideo').trigger('play');}});
+('video').addClass('inlinevideo');
+('body').on('click touchstart', function ()  {var videoElement = document.getElementsByClassName('inlinevideo');if (videoElement.playing) {} else {$('.inlinevideo').trigger('play');}});
