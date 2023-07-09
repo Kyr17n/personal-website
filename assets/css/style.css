@@ -288,7 +288,7 @@ a:visited {
 
 a:hover,
 a:focus {
-
+    color: #000000;
     border-bottom: 2px solid black;
 
 }
@@ -1036,6 +1036,12 @@ focus {
 @media screen and (max-width: 768px) {
 
     .hero-container1 {
+        display: none;
+        
+      }
+      
+
+    .hero-container {
         display: block;
         position: relative;
         width: 100%;
@@ -1054,7 +1060,7 @@ focus {
         filter: blur(1px)
       }
       
-      .hero-content1 {
+      .hero-content {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -1063,7 +1069,7 @@ focus {
         width: 100%;
         color: #ffffff;
       }
-      .hero-content1 h1 {
+      .hero-content h1 {
         padding: 0px 20px;
         letter-spacing: 2px;
         font-size: 30px;
@@ -1470,7 +1476,7 @@ focus {
         position: fixed;
         top: 0;
         z-index: 999;
-        border-bottom: 1px solid #aa2419;
+        border-bottom: 2px solid #aa2419;
 
     }
 
@@ -1851,20 +1857,24 @@ focus {
         opacity: 1;
         pointer-events: auto;
     }
+    .menu-items.show a:hover {
+        color: #000000;
+    }
 
     .menu-items li {
         margin-bottom: 10px;
     }
 
     .menu-items li a {
+       
         color: #000000;
         text-decoration: none;
     }
 
     .menu-items li a:hover {
-        color: #000000;
+        color: #13cbc5;
+        text-decoration: none;
     }
-
     .hamburger-icon-wrapper {
         background-color: #aa2419;
         padding: 10px 10px;

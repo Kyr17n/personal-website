@@ -222,6 +222,10 @@
             opacity: 1;
             pointer-events: auto;
         }
+        .menu-items.show a:hover {
+            color: #ffffff;
+            border-bottom: 1px solid white;
+        }
 
         .menu-items li {
             margin-bottom: 10px;
@@ -231,7 +235,12 @@
             color: #ffffff;
             text-decoration: none;
         }
-
+        /* .menu-items li a:hover {
+            color: #ffffff;
+            text-decoration: none;
+        }
+      */
+       
         .portfolio-button {
             display: inline-block;
             padding: 10px 20px;
