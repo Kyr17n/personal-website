@@ -1056,7 +1056,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: blur(8px); /* Adjust the blur intensity as desired */
+        filter: blur(1px); /* Adjust the blur intensity as desired */
       }
       
       .hero-content1 {
