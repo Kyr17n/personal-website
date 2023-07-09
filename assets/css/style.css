@@ -471,7 +471,11 @@
         /* margin-top: 100px; */
         margin: 0px;
     }
-
+    .toggle-container__column--h2 {
+        padding-top: 20px;
+        /* margin-top: 20px; */
+    }
+    
 
     .toggle-container__row {
         width: 100%;
