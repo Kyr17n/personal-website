@@ -1686,6 +1686,7 @@
     }
     
     .hero-heading p {
+        display: none;
         margin: 0;
         color: #aa2419;
         font-size: 16px;
