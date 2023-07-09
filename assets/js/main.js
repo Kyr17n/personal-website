@@ -384,20 +384,3 @@ document.querySelector('.portfolio-button').addEventListener('click', function(e
 });
 
 
-function handleVisibilityChange() {
-  if (document.visibilityState === "visible") {
-    // Device is not in power-saving mode
-    // Show the video element
-    video.style.display = "block";
-  } else {
-    // Device is in power-saving mode
-    // Hide the video element
-    video.style.display = "none";
-  }
-}
-
-// Get the video element by its ID
-const video = document.getElementById("hero-video");
-
-// Listen for visibilitychange event
-document.addEventListener("visibilitychange", handleVisibilityChange);

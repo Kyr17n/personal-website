@@ -15,7 +15,7 @@
       
 
     .hero-container {
-        display: block;
+        display: none;
         position: relative;
         width: 100%;
         height: 100vh;
@@ -472,8 +472,8 @@
         margin: 0px;
     }
     .toggle-container__column--h2 {
-        padding-top: 20px;
-        /* margin-top: 20px; */
+        padding-top: 10px;
+        margin-top: 40px;
     }
     
 
