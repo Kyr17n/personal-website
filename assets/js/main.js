@@ -384,7 +384,20 @@ document.querySelector('.portfolio-button').addEventListener('click', function(e
 });
 
 
+function handleVisibilityChange() {
+  if (document.visibilityState === "visible") {
+    // Device is not in power-saving mode
+    // Show the video element
+    video.style.display = "block";
+  } else {
+    // Device is in power-saving mode
+    // Hide the video element
+    video.style.display = "none";
+  }
+}
 
-//PLAYS VIDEO IN LOW POWER MODE
-('video').addClass('inlinevideo');
-('body').on('click touchstart', function ()  {var videoElement = document.getElementsByClassName('inlinevideo');if (videoElement.playing) {} else {$('.inlinevideo').trigger('play');}});
+// Get the video element by its ID
+const video = document.getElementById("hero-video");
+
+// Listen for visibilitychange event
+document.addEventListener("visibilitychange", handleVisibilityChange);
