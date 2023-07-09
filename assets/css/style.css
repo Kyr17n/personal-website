@@ -208,7 +208,7 @@
 
     .project-title {
         position: sticky;
-        top: 58px;
+        top: 60px;
         /* Adjust the value to be equal to the height of your page header */
         background-color: #ffffff;
         /* Adjust the background color if needed */
@@ -552,7 +552,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        border-top: 1px solid white;
+        border-top: 2px solid #aa2419;
 
 
 
@@ -561,11 +561,23 @@
     .page-footer {
         flex: 1 1 100px;
         justify-content: center;
-        align-items: center;
-        align-self: center;
         margin-bottom: 10px;
+        
     }
+    .contact-us a  {
+        color: white;   
+    }
+    
 
+    .contact-us a {
+        text-decoration: underline;
+    }
+    
+    .contact-us a:hover,
+    focus {
+        text-decoration: underline;
+        color: #aa2419;
+    }
 
 
     #nav-list {
@@ -595,7 +607,20 @@
 
     .social-media__item {
         justify-content: space-between;
-        fill: #ededed;
+        margin: 10px;
+        fill: white;
+        text-decoration: none;
+    }
+    
+    .social-media a:hover {
+        border-bottom: none;
+        text-decoration: none;
+    }
+    
+    .social-media__item:hover,
+    focus {
+        fill: #aa2419;
+    
     }
 
     .hero-heading {
@@ -617,9 +642,9 @@
     .hero-heading p {
         margin: 0;
         color: #aa2419;
-        font-size: 10px;
+        font-size: 12px;
         letter-spacing: 2px;
-        font-weight: 500;
+        font-weight: 600;
 
 
     }
