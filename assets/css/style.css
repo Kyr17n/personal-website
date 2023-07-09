@@ -715,11 +715,18 @@
     }
 
 
+  
+
     .contact-container {
+        display: flex;
+        flex-direction: column;
         margin-top: 50px;
         padding: 20px 0px 20px 0px;
         /* border: 1px solid gray; */
         background-color: rgba(128, 128, 128, 0.074);
+        align-items: center;
+        justify-content: center;
+
 
     }
 
@@ -850,6 +857,17 @@
         margin: 0;
         padding: 20px;
     }
+    .experience-section {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 500px;
+
+        background-color: rgba(128, 128, 128, 0.074);
+        max-width: 1000px;
+        max-height: auto;
+        padding: 20px;
+        min-width: 250px;
+    }
 
     .experience-section h2 {
         padding-bottom: 10px;
@@ -876,6 +894,7 @@
 
     .experience__item {
         margin-bottom: 10px;
+        margin-left: 15px;
     }
 
     .experience-container {
