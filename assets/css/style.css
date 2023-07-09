@@ -58,9 +58,8 @@
   .portfolio-button {
     display: inline-block;
     padding:15px 20px;
-    
-    background-color:#aa2419;
-    color: #ffffff;
+    background-color: #ffffff;
+    color:  #aa2419;
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
@@ -71,8 +70,8 @@
   }
   
   .portfolio-button:hover {
-    background-color: #ffffff;
-    color:  #aa2419;
+    background-color:#aa2419;
+    color: #ffffff;
     border: none;
   }
 
@@ -1074,6 +1073,7 @@ focus {
         letter-spacing: 2px;
         font-size: 30px;
          color: #ffffff;
+         margin: auto;
        }
  
       .hero-content1 p {
