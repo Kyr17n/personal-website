@@ -1034,11 +1034,8 @@
     }
     .hero-container {
         display: none;
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
       }
+      
     .hero-container1 {
         display: block;
         position: relative;
