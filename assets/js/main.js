@@ -402,21 +402,3 @@ window.addEventListener("scroll", function() {
   }
 });
 
-
-
-// JavaScript code for the scroll animation
-// This script assumes you have a link with class="portfolio-button" and href="#toggle" in your HTML.
-
-// Function to smoothly scroll to the element with ID "toggle"
-function scrollToToggle() {
-  const toggleElement = document.getElementById("toggle");
-
-  // Calculate the distance from the current scroll position to the "toggle" element
-  const scrollOffset = toggleElement.getBoundingClientRect().top;
-
-  // Scroll to the "toggle" element with smooth animation
-  window.scrollBy({
-    top: scrollOffset,
-    behavior: "smooth"
-  });
-}
