@@ -377,10 +377,46 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.querySelector('.portfolio-button').addEventListener('click', function(e) {
-  e.preventDefault();
-  const targetSection = document.querySelector(this.getAttribute('href'));
-  targetSection.scrollIntoView({ behavior: 'smooth' });
+// JavaScript code for the scroll-up animation
+// This script assumes you have a button with id="backToTopBtn" in your HTML.
+
+// Function to smoothly scroll to the top of the page
+function scrollToTop() {
+  // Scroll to the top of the page with smooth animation
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+// Show/hide the "back to top" button based on the user's scroll position
+window.addEventListener("scroll", function() {
+  const backToTopBtn = document.getElementById("backToTopBtn");
+  const scrollOffset = window.scrollY;
+
+  // Show the button when the user scrolls down 200px from the top
+  if (scrollOffset >= 200) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
 });
 
 
+
+// JavaScript code for the scroll animation
+// This script assumes you have a link with class="portfolio-button" and href="#toggle" in your HTML.
+
+// Function to smoothly scroll to the element with ID "toggle"
+function scrollToToggle() {
+  const toggleElement = document.getElementById("toggle");
+
+  // Calculate the distance from the current scroll position to the "toggle" element
+  const scrollOffset = toggleElement.getBoundingClientRect().top;
+
+  // Scroll to the "toggle" element with smooth animation
+  window.scrollBy({
+    top: scrollOffset,
+    behavior: "smooth"
+  });
+}
