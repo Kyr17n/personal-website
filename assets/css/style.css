@@ -213,6 +213,7 @@
         z-index: 999;
         /* Adjust the z-index as per your requirement */
         /* Other styles for the sticky element */
+        color: #293462;
     }
 
     .popup-message {
@@ -236,6 +237,7 @@
         padding: 0px 0px 30px 0px;
         font-size: 25px;
         margin: 0;
+        color: #293462;
     }
 
 
@@ -1336,6 +1338,7 @@
     .project-title {
         position: sticky;
         top: 82px;
+        color: #293462;
         /* Adjust the value to be equal to the height of your page header */
         background-color: #fff;
         /* Adjust the background color if needed */
@@ -2089,10 +2092,12 @@
 
     .thanks {
         width: 100%;
-        text-align: left;
-        padding: 0px 0px 30px 0px;
+        text-align: center;
+        padding: 30px 0px 30px 0px;
         font-size: 40px;
         margin: 0;
+        color: #293462;
+       
     }
 
 }
