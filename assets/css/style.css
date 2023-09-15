@@ -1547,7 +1547,7 @@
     .toggle-container__column {
 
         background-color: rgba(111, 109, 109, 0.382);
-        padding: 50px 150px 50px 150px;
+        padding: 150px 150px 50px 150px;
         margin-top: 0px;
 
     }
@@ -1585,7 +1585,7 @@
 
     .toggle-container__column--h2 {
         padding-top: 0px;
-        margin-top: 0px;
+        margin-top: 50px;
     }
 
     .toggle-container__row--item:nth-child(2) {
