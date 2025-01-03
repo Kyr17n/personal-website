@@ -1,6 +1,6 @@
 const spanElement = document.getElementById("typed-text");
 const cursorElement = document.getElementById("cursor");
-const words = ["full-stack developer.","ui / ux designer."]; // Words to be typed
+const words = ["ui / ux designer.","ui / ux designer."]; // Words to be typed
 let currentWordIndex = 0;
 let currentCharIndex = 0;
 let isTyping = true;
