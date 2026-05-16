@@ -483,7 +483,7 @@
       gap: 4rem;
       align-items: start;
     }
-    .contact-left {}
+    
     .contact-title {
       font-size: clamp(2.2rem, 4.5vw, 3.5rem);
       font-weight: 800;
@@ -554,6 +554,85 @@
     .form-group input:focus,
     .form-group textarea:focus { border-color: var(--accent); }
     .form-group textarea { min-height: 100px; }
+
+    /* ── CYBER SECURITY ── */
+    #cyber { background: var(--bg); }
+    .cyber-header {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;
+    }
+    .cyber-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800; letter-spacing: -0.03em; line-height: 1.1;
+    }
+    .cyber-intro {
+      font-size: 0.97rem; line-height: 1.75; color: var(--ink2);
+      max-width: 640px; margin-bottom: 2.5rem;
+    }
+    .cyber-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: #2e7d52;
+      background: rgba(46,125,82,0.1);
+      border-radius: 999px; padding: 0.25rem 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    [data-theme="dark"] .cyber-tag { color: #5ecb8a; background: rgba(94,203,138,0.1); }
+    .cyber-tag::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: #2e7d52; flex-shrink: 0;
+    }
+    [data-theme="dark"] .cyber-tag::before { background: #5ecb8a; }
+
+    .cyber-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .cyber-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex; flex-direction: column; gap: 0.75rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .cyber-card:hover { border-color: #2e7d52; transform: translateY(-3px); }
+    [data-theme="dark"] .cyber-card:hover { border-color: #5ecb8a; }
+    .cyber-card-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(46,125,82,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+    [data-theme="dark"] .cyber-card-icon { background: rgba(94,203,138,0.1); }
+    .cyber-card-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem; font-weight: 700; line-height: 1.3;
+    }
+    .cyber-card-desc {
+      font-size: 0.82rem; color: var(--ink3); line-height: 1.6; flex: 1;
+    }
+    .cyber-card-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.78rem; font-weight: 500;
+      color: #2e7d52;
+      transition: gap 0.2s;
+    }
+    [data-theme="dark"] .cyber-card-link { color: #5ecb8a; }
+    .cyber-card-link:hover { gap: 0.65rem; }
+    .cyber-card-link.no-file {
+      color: var(--ink3); pointer-events: none;
+    }
+    .cyber-full-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) { .cyber-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .cyber-grid { grid-template-columns: 1fr; } }
 
     /* ── FOOTER ── */
     footer {
@@ -636,7 +715,8 @@
     <li><a href="#about">Home</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#work">Work</a></li>
+    <li><a href="#design">Design Works</a></li>
+    <li><a href="#cyber">Cyber Security Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
@@ -653,7 +733,8 @@
   <a href="#about" onclick="closeMobile()">Home</a>
   <a href="#skills" onclick="closeMobile()">Skills</a>
   <a href="#experience" onclick="closeMobile()">Experience</a>
-  <a href="#work" onclick="closeMobile()">Work</a>
+  <a href="#design" onclick="closeMobile()">Design Works</a>
+  <a href="#cyber" onclick="closeMobile()">Cyber Security Projects</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
 
@@ -665,7 +746,7 @@
       <div class="hero-role">Available for new projects</div>
       <h1 class="hero-tagline">Design.<br><span>Develop.</span><br>Deliver.</h1>
       <p class="hero-bio">
-        I'm Kyrian, a product designer and frontend developer with 5+ years of experience building digital products people love. I blend design thinking with technical skill to craft interfaces that are intuitive, visually sharp, and aligned with real business goals.
+        I am a product designer and frontend developer with over 5 years of experience building sharp, intuitive digital products. Currently, I am leveraging my deep understanding of the frontend ecosystem and user behavior to pivot into Cyber Security. My unique background allows me to approach security not just as a set of rules, but as an essential layer of the user experience—specializing in securing applications from the ground up without compromising usability. I blend design thinking, clean code, and a security-first mindset to protect digital products and the people who use them.
       </p>
       <div class="hero-cta">
         <a href="#work" class="btn btn-primary">View My Work →</a>
@@ -769,8 +850,23 @@
     </div>
 
     <div class="skills-cols reveal" style="transition-delay:0.2s">
+       <div class="skills-card">
+        <h4>Cyber Security Skills</h4>
+        <ul>
+          <li class="skill-item">NIST Cybersecurity Framework, ISO 27001, SOC1, SOC2</li>
+          <li class="skill-item">SIEM tools such as Azure Sentinel, Splunk</li>
+          <li class="skill-item">Network security protocols and technologies (TCP/IP, VPN, IDS/IPS Firewalls, Defender).</li>
+          <li class="skill-item">Network traffic analysis and packetcapture tools (e.g., Wireshark, tcpdump).</li>
+          <li class="skill-item">Linux System Administration</li>
+          <li class="skill-item">Microsoft Active Directory</li>
+          <li class="skill-item">Windows Event log analysis using Sysmon and Tracing for Windows (ETW)</li>
+          <li class="skill-item">Security compliance frameworks and regulations specific to your industry (e.g., GDPR, HIPAA).</li>
+          <li class="skill-item">Scripting and Query languages such as Python, PowerShell, BashShell, SQL for automation and Database management</li>
+          <li class="skill-item">Cloud security principles and technologies, including AWS, Azure, or Google Cloud Platform..</li>
+        </ul>
+      </div>
       <div class="skills-card">
-        <h4>Professional Skills</h4>
+        <h4>Design/Development Skills</h4>
         <ul>
           <li class="skill-item">Visual Design & Coding</li>
           <li class="skill-item">User Interface (UI) Design</li>
@@ -780,17 +876,7 @@
           <li class="skill-item">Design Systems (Figma, Sketch, Adobe XD)</li>
         </ul>
       </div>
-      <div class="skills-card">
-        <h4>Personal Skills</h4>
-        <ul>
-          <li class="skill-item">Leadership</li>
-          <li class="skill-item">Adaptability</li>
-          <li class="skill-item">Time Management</li>
-          <li class="skill-item">Emotional Intelligence</li>
-          <li class="skill-item">Creativity & Problem Solving</li>
-          <li class="skill-item">Communication & Collaboration</li>
-        </ul>
-      </div>
+     
     </div>
   </section>
 
@@ -836,7 +922,7 @@
     <div class="work-header reveal">
       <div>
         <p class="section-label">Selected projects</p>
-        <h2 class="work-title">My Work</h2>
+        <h2 class="work-title">Product Design Works</h2>
       </div>
       <!-- <a href="https://www.linkedin.com/in/kyrianokeke/" target="_blank" rel="noopener" class="btn btn-outline">View All ↗</a> -->
     </div>
@@ -885,6 +971,93 @@
           <p class="project-desc">A vintage clothing discovery and resale app with a rich, editorial aesthetic — pairing warm typography with immersive photography.</p>
         </div>
       </a>
+    </div>
+  </section>
+
+  <!-- CYBER SECURITY -->
+  <section id="cyber">
+    <div class="cyber-header reveal">
+      <div>
+        <span class="cyber-tag">Pivoting to security</span>
+        <h2 class="cyber-title">Cyber Security<br>Projects</h2>
+      </div>
+      <a href="https://kyr17n.wixstudio.com/mysite/projects" target="_blank" rel="noopener" class="btn btn-outline">Full Security Portfolio ↗</a>
+    </div>
+    <p class="cyber-intro reveal">
+      Alongside my design work, I'm actively transitioning into cyber security. I'm pursuing certifications and working through hands-on projects spanning incident response, network security, Linux administration, and threat analysis. Here's a snapshot of that work.
+    </p>
+
+    <div class="cyber-grid">
+
+      <div class="cyber-card reveal" style="transition-delay:0.05s">
+        <div class="cyber-card-icon">🛡️</div>
+        <div class="cyber-card-name">Incident Report Analysis</div>
+        <p class="cyber-card-desc">Analysed a DDoS attack on an organisation's network using the NIST Cybersecurity Framework to structure the incident response and recommendations.</p>
+        <a
+          href="https://drive.google.com/file/d/17ycf8hTCugpebagMPWvPgH5iR0VKjPLq/view?usp=sharing"
+          target="_blank" rel="noopener"
+          class="cyber-card-link"
+        >View Report →</a>
+      </div>
+
+      <div class="cyber-card reveal" style="transition-delay:0.1s">
+        <div class="cyber-card-icon">🐧</div>
+        <div class="cyber-card-name">File Permissions in Linux</div>
+        <p class="cyber-card-desc">Used Linux commands to manage and harden file permissions for users and groups, enforcing the principle of least privilege across a simulated environment.</p>
+        <a
+          href="https://drive.google.com/file/d/177NTYCcTaPOrpMicaOYW9Av0lq6YqmEA/view?usp=sharing"
+          target="_blank" rel="noopener"
+          class="cyber-card-link"
+        >View Report →</a>
+      </div>
+
+      <div class="cyber-card reveal" style="transition-delay:0.15s">
+        <div class="cyber-card-icon">🔍</div>
+        <div class="cyber-card-name">Security Audit — Botium Toys</div>
+        <p class="cyber-card-desc">Conducted a full internal security audit for Botium Toys, identifying risks, threats, and vulnerabilities across their assets and recommending controls.</p>
+        <a
+          href="https://drive.google.com/file/d/177NTYCcTaPOrpMicaOYW9Av0lq6YqmEA/view?usp=sharing"
+          target="_blank" rel="noopener"
+          class="cyber-card-link"
+        >View Report →</a>
+      </div>
+
+      <div class="cyber-card reveal" style="transition-delay:0.2s">
+        <div class="cyber-card-icon">🔒</div>
+        <div class="cyber-card-name">Network Hardening</div>
+        <p class="cyber-card-desc">Strengthened an organisation's network security posture following a breach — analysing the attack surface and implementing hardening measures to reduce future risk.</p>
+        <a
+          href="https://drive.google.com/file/d/1wngmtG5dvamnOA_Cme1blH6ChRzj8qiB/view?usp=sharing"
+          target="_blank" rel="noopener"
+          class="cyber-card-link"
+        >View Report →</a>
+      </div>
+
+      <div class="cyber-card reveal" style="transition-delay:0.25s">
+        <div class="cyber-card-icon">📡</div>
+        <div class="cyber-card-name">tcpdump — Traffic Analysis</div>
+        <p class="cyber-card-desc">Used tcpdump to capture and analyse live TCP traffic, identifying patterns and anomalies to support network monitoring and threat detection workflows.</p>
+        <a
+          href="https://drive.google.com/file/d/1fkvBqrn-a8D8Gl3E-ujY7J53DhoxP1QE/view?usp=sharing"
+          target="_blank" rel="noopener"
+          class="cyber-card-link"
+        >View Report →</a>
+      </div>
+
+      <div class="cyber-card reveal" style="transition-delay:0.3s">
+        <div class="cyber-card-icon">🧱</div>
+        <div class="cyber-card-name">Microsoft Firewall Configuration</div>
+        <p class="cyber-card-desc">Enabled and configured Windows Firewall rules to control inbound and outbound traffic, reducing the attack surface on a Windows environment.</p>
+        <span class="cyber-card-link no-file">Report coming soon</span>
+      </div>
+
+      <div class="cyber-card reveal" style="transition-delay:0.35s">
+        <div class="cyber-card-icon">🛡</div>
+        <div class="cyber-card-name">Microsoft Defender Setup</div>
+        <p class="cyber-card-desc">Configured and updated Microsoft Defender to ensure real-time protection, scheduled scanning, and up-to-date threat definitions across a managed device.</p>
+        <span class="cyber-card-link no-file">Report coming soon</span>
+      </div>
+
     </div>
   </section>
 
