@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incident Report Analysis — Kyrian Okeke</title>
+  <meta name="description" content="Analysed a DDoS ICMP flood attack using the NIST Cybersecurity Framework — by Kyrian Okeke, Cyber Security Analyst." />
+  <meta property="og:title" content="Incident Report Analysis — Kyrian Okeke" />
+  <meta property="og:url" content="https://kyr17n.github.io/personal-website/cyber-incident-report.html" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/shared.css" />
+  <style>
+    main { padding-top: var(--nav-h); }
+    :root { --cyber:#2e7d52; --cyber2:rgba(46,125,82,0.1); }
+    [data-theme="dark"] { --cyber:#5ecb8a; --cyber2:rgba(94,203,138,0.08); }
+
+    .case-hero { padding:clamp(3rem,7vw,6rem) clamp(1.5rem,7vw,6rem) clamp(2rem,4vw,3rem); position:relative; z-index:1; border-bottom:1px solid var(--border); }
+    .breadcrumb { display:flex; align-items:center; gap:.5rem; font-size:.78rem; color:var(--ink3); margin-bottom:1.5rem; }
+    .breadcrumb a { color:var(--cyber); }
+    .breadcrumb span { opacity:.5; }
+    .case-hero-inner { display:grid; grid-template-columns:1fr auto; align-items:end; gap:2rem; }
+    .case-tag { display:inline-flex; align-items:center; gap:.4rem; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--cyber); background:var(--cyber2); border-radius:999px; padding:.25rem .75rem; margin-bottom:.75rem; }
+    .case-tag::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--cyber); flex-shrink:0; }
+    .case-title { font-size:clamp(2.2rem,5vw,4rem); font-weight:800; letter-spacing:-.04em; line-height:1.05; margin-bottom:1rem; }
+    .case-subtitle { font-size:1.05rem; color:var(--ink2); line-height:1.7; max-width:600px; }
+    .case-meta { display:flex; flex-direction:column; gap:1rem; align-items:flex-end; }
+    .meta-pill { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:.6rem 1rem; text-align:right; min-width:140px; }
+    .meta-pill-label { font-size:.65rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink3); margin-bottom:.2rem; }
+    .meta-pill-value { font-family:'Syne',sans-serif; font-size:.88rem; font-weight:700; color:var(--ink); }
+
+    .case-body { padding:clamp(3rem,6vw,5rem) clamp(1.5rem,7vw,6rem); position:relative; z-index:1; max-width:960px; }
+    .case-section { margin-bottom:clamp(2.5rem,5vw,4rem); }
+    .case-section-label { font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:var(--cyber); margin-bottom:.5rem; }
+    .case-section-title { font-family:'Syne',sans-serif; font-size:clamp(1.4rem,3vw,2rem); font-weight:800; letter-spacing:-.03em; margin-bottom:1rem; }
+    .case-section p { font-size:.97rem; line-height:1.85; color:var(--ink2); margin-bottom:.85rem; }
+
+    .nist-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:.85rem; margin:1.5rem 0; }
+    .nist-card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:1.25rem 1rem; text-align:center; transition:border-color .2s,transform .2s; }
+    .nist-card:hover { border-color:var(--cyber); transform:translateY(-3px); }
+    .nist-icon { font-size:1.5rem; margin-bottom:.5rem; }
+    .nist-label { font-family:'Syne',sans-serif; font-size:.78rem; font-weight:700; color:var(--cyber); text-transform:uppercase; letter-spacing:.08em; margin-bottom:.5rem; }
+    .nist-text { font-size:.75rem; color:var(--ink3); line-height:1.5; }
+
+    .detail-block { background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--cyber); border-radius:0 12px 12px 0; padding:1.25rem 1.5rem; margin-bottom:1rem; }
+    .detail-block h4 { font-family:'Syne',sans-serif; font-size:.95rem; font-weight:700; color:var(--cyber); margin-bottom:.5rem; }
+    .detail-block p { font-size:.88rem; color:var(--ink2); line-height:1.7; margin:0; }
+
+    .findings-list { display:flex; flex-direction:column; gap:.6rem; margin:1rem 0; }
+    .finding-item { display:flex; align-items:flex-start; gap:.75rem; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:.85rem 1rem; font-size:.88rem; color:var(--ink2); line-height:1.6; }
+    .finding-item::before { content:'→'; color:var(--cyber); font-size:.8rem; flex-shrink:0; margin-top:.1em; }
+
+    .case-cta { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; margin-top:2.5rem; }
+    .btn-cyber { background:var(--cyber); color:#fff; display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1.75rem; border-radius:999px; font-family:'DM Sans',sans-serif; font-size:.9rem; font-weight:500; transition:all .25s; border:none; cursor:pointer; }
+    .btn-cyber:hover { opacity:.88; transform:translateY(-2px); }
+
+    .next-project { border-top:1px solid var(--border); padding:clamp(2rem,4vw,3.5rem) clamp(1.5rem,7vw,6rem); display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; position:relative; z-index:1; }
+    .next-label { font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink3); margin-bottom:.4rem; }
+    .next-title { font-family:'Syne',sans-serif; font-size:1.4rem; font-weight:800; color:var(--ink); transition:color .2s; }
+    .next-project:hover .next-title { color:var(--cyber); }
+
+    @media(max-width:768px){ .case-hero-inner{grid-template-columns:1fr;} .case-meta{align-items:flex-start;flex-direction:row;flex-wrap:wrap;} .nist-grid{grid-template-columns:repeat(3,1fr);} }
+    @media(max-width:480px){ .nist-grid{grid-template-columns:1fr 1fr;} }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KYR17N</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#work">Design Work</a></li>
+    <li><a href="index.html#cyber">Security</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="theme-label" id="theme-label">Light</span>
+    <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode"></button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html" onclick="closeMobile()">Home</a>
+  <a href="index.html#work" onclick="closeMobile()">Design Work</a>
+  <a href="index.html#cyber" onclick="closeMobile()">Security</a>
+  <a href="index.html#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<main>
+  <div class="case-hero reveal">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span><a href="index.html#cyber">Security</a><span>/</span>Incident Report Analysis
+    </div>
+    <div class="case-hero-inner">
+      <div>
+        <span class="case-tag">Incident Response</span>
+        <h1 class="case-title">Incident Report Analysis<br>using NIST CSF</h1>
+        <p class="case-subtitle">Analysed a DDoS attack on an organisation's network using the NIST Cybersecurity Framework — structuring a full incident response across all five functions: Identify, Protect, Detect, Respond, and Recover.</p>
+      </div>
+      <div class="case-meta">
+        <div class="meta-pill"><div class="meta-pill-label">Framework</div><div class="meta-pill-value">NIST CSF</div></div>
+        <div class="meta-pill"><div class="meta-pill-label">Attack Type</div><div class="meta-pill-value">DDoS / ICMP Flood</div></div>
+        <div class="meta-pill"><div class="meta-pill-label">Controls Used</div><div class="meta-pill-value">Firewall · IDS/IPS</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-body">
+    <div class="case-section reveal">
+      <p class="case-section-label">Overview</p>
+      <h2 class="case-section-title">What Happened</h2>
+      <p>The organisation experienced a sudden and complete loss of network services. Investigation revealed the cause: a DDoS attack using an ICMP flood, which overwhelmed network capacity and blocked all legitimate traffic.</p>
+      <p>The team responded by blocking the attack at the firewall and shutting down non-critical services to restore critical systems first. I then produced a structured incident analysis using the five functions of the NIST Cybersecurity Framework.</p>
+    </div>
+
+    <div class="case-section reveal">
+      <p class="case-section-label">Framework Applied</p>
+      <h2 class="case-section-title">NIST CSF — Five Functions</h2>
+      <div class="nist-grid">
+        <div class="nist-card"><div class="nist-icon">🔎</div><div class="nist-label">Identify</div><div class="nist-text">Determined attack vector, blast radius, and which critical assets were affected across the internal network.</div></div>
+        <div class="nist-card"><div class="nist-icon">🛡️</div><div class="nist-label">Protect</div><div class="nist-text">New firewall rule to rate-limit ICMP packets; IDS/IPS deployed to filter suspicious traffic by characteristic.</div></div>
+        <div class="nist-card"><div class="nist-icon">📡</div><div class="nist-label">Detect</div><div class="nist-text">Source IP verification configured on firewall; network monitoring software deployed for ongoing anomaly detection.</div></div>
+        <div class="nist-card"><div class="nist-icon">⚡</div><div class="nist-label">Respond</div><div class="nist-text">Response playbook defined: isolate, restore critical services, analyse logs, escalate to management and legal.</div></div>
+        <div class="nist-card"><div class="nist-icon">🔄</div><div class="nist-label">Recover</div><div class="nist-text">Block at firewall → suspend non-critical services → restore critical systems → bring remaining services back online.</div></div>
+      </div>
+    </div>
+
+    <div class="case-section reveal">
+      <p class="case-section-label">Detailed Findings</p>
+      <h2 class="case-section-title">Response Breakdown</h2>
+      <div class="detail-block">
+        <h4>🔎 Identify</h4>
+        <p>A malicious actor targeted the organisation with an ICMP flood attack. The entire internal network was affected — all critical network resources needed to be secured and restored to a functioning state.</p>
+      </div>
+      <div class="detail-block">
+        <h4>🛡️ Protect</h4>
+        <p>A new firewall rule was implemented to limit the rate of incoming ICMP packets. An IDS/IPS system was deployed to filter suspicious ICMP traffic based on known attack signatures, preventing the same attack vector from being exploited again.</p>
+      </div>
+      <div class="detail-block">
+        <h4>📡 Detect</h4>
+        <p>Source IP address verification was configured on the firewall to detect and block spoofed IPs — a common technique in ICMP flood attacks. Network monitoring software was deployed to provide ongoing visibility into traffic anomalies.</p>
+      </div>
+      <div class="detail-block">
+        <h4>⚡ Respond</h4>
+        <p>A formal response protocol was established: isolate affected systems to limit further disruption, restore critical services, analyse network logs for indicators of compromise, and report to management and relevant legal authorities where applicable.</p>
+      </div>
+      <div class="detail-block">
+        <h4>🔄 Recover</h4>
+        <p>Recovery was sequenced to minimise downtime: block ICMP floods at the firewall → suspend non-critical services → restore critical services → once the packet flood timed out, bring all remaining systems back online.</p>
+      </div>
+    </div>
+
+    <div class="case-section reveal">
+      <p class="case-section-label">Key Takeaways</p>
+      <h2 class="case-section-title">What This Demonstrates</h2>
+      <div class="findings-list">
+        <div class="finding-item">Ability to apply the NIST CSF as a structured analytical tool across a real security incident lifecycle.</div>
+        <div class="finding-item">Understanding of ICMP-based DDoS attacks — how flooding works and how spoofed IPs amplify impact.</div>
+        <div class="finding-item">Knowledge of defensive controls: firewall rate limiting, IDS/IPS deployment, and source IP verification.</div>
+        <div class="finding-item">Ability to produce a clear, structured incident report with actionable findings and recommendations.</div>
+        <div class="finding-item">Awareness of escalation procedures including management notification and legal reporting requirements.</div>
+      </div>
+    </div>
+
+    <div class="case-cta reveal">
+      <a href="https://drive.google.com/file/d/17ycf8hTCugpebagMPWvPgH5iR0VKjPLq/view?usp=drive_link" target="_blank" rel="noopener" class="btn-cyber">Download Original Report ↗</a>
+      <a href="index.html#cyber" class="btn btn-outline">← Back to Security</a>
+    </div>
+  </div>
+
+  <a href="cyber-linux-permissions.html" class="next-project">
+    <div><div class="next-label">Next Project</div><div class="next-title">File Permissions in Linux →</div></div>
+  </a>
+</main>
+
+<footer>
+  <p class="footer-copy">© 2024 Kyrian Okeke. All rights reserved.</p>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/kyrianokeke/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">in</a>
+    <a href="https://twitter.com/kyrianokeke/" target="_blank" rel="noopener" class="social-link" aria-label="Twitter / X">𝕏</a>
+    <a href="https://github.com/Kyr17n" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">⌥</a>
+  </div>
+</footer>
+<button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<script src="assets/js/shared-nav.js"></script>
+</body>
+</html>

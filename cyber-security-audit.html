@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Audit — Botium Toys — Kyrian Okeke</title>
+  <meta name="description" content="Conducted a full internal security audit for Botium Toys, identifying risks and compliance gaps — by Kyrian Okeke, Cyber Security Analyst." />
+  <meta property="og:title" content="Security Audit — Botium Toys — Kyrian Okeke" />
+  <meta property="og:url" content="https://kyr17n.github.io/personal-website/cyber-security-audit.html" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="assets/css/shared.css" />
+  <style>
+    main { padding-top: var(--nav-h); }
+    :root { --cyber:#2e7d52; --cyber2:rgba(46,125,82,0.1); --red:rgba(200,60,60,0.1); --green:rgba(46,125,82,0.1); }
+    [data-theme="dark"] { --cyber:#5ecb8a; --cyber2:rgba(94,203,138,0.08); }
+
+    .case-hero { padding:clamp(3rem,7vw,6rem) clamp(1.5rem,7vw,6rem) clamp(2rem,4vw,3rem); position:relative; z-index:1; border-bottom:1px solid var(--border); }
+    .breadcrumb { display:flex; align-items:center; gap:.5rem; font-size:.78rem; color:var(--ink3); margin-bottom:1.5rem; }
+    .breadcrumb a { color:var(--cyber); }
+    .breadcrumb span { opacity:.5; }
+    .case-hero-inner { display:grid; grid-template-columns:1fr auto; align-items:end; gap:2rem; }
+    .case-tag { display:inline-flex; align-items:center; gap:.4rem; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--cyber); background:var(--cyber2); border-radius:999px; padding:.25rem .75rem; margin-bottom:.75rem; }
+    .case-tag::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--cyber); flex-shrink:0; }
+    .case-title { font-size:clamp(2.2rem,5vw,4rem); font-weight:800; letter-spacing:-.04em; line-height:1.05; margin-bottom:1rem; }
+    .case-subtitle { font-size:1.05rem; color:var(--ink2); line-height:1.7; max-width:600px; }
+    .case-meta { display:flex; flex-direction:column; gap:1rem; align-items:flex-end; }
+    .meta-pill { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:.6rem 1rem; text-align:right; min-width:140px; }
+    .meta-pill-label { font-size:.65rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink3); margin-bottom:.2rem; }
+    .meta-pill-value { font-family:'Syne',sans-serif; font-size:.88rem; font-weight:700; color:var(--ink); }
+
+    .case-body { padding:clamp(3rem,6vw,5rem) clamp(1.5rem,7vw,6rem); position:relative; z-index:1; max-width:960px; }
+    .case-section { margin-bottom:clamp(2.5rem,5vw,4rem); }
+    .case-section-label { font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:var(--cyber); margin-bottom:.5rem; }
+    .case-section-title { font-family:'Syne',sans-serif; font-size:clamp(1.4rem,3vw,2rem); font-weight:800; letter-spacing:-.03em; margin-bottom:1rem; }
+    .case-section p { font-size:.97rem; line-height:1.85; color:var(--ink2); margin-bottom:.85rem; }
+
+    /* Risk score */
+    .risk-banner {
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 4px solid #c84040; border-radius: 0 12px 12px 0;
+      padding: 1.25rem 1.5rem; margin: 1.5rem 0;
+      display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .risk-score-num {
+      font-family:'Syne',sans-serif; font-size:3rem; font-weight:800;
+      color:#c84040; line-height:1;
+    }
+    .risk-score-label { font-size:.75rem; color:var(--ink3); text-transform:uppercase; letter-spacing:.08em; }
+    .risk-score-desc { font-size:.9rem; color:var(--ink2); line-height:1.6; }
+
+    /* Checklist table */
+    .checklist { width:100%; border-collapse:collapse; margin:1.25rem 0; font-size:.86rem; }
+    .checklist th { text-align:left; padding:.6rem 1rem; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink3); border-bottom:2px solid var(--border); }
+    .checklist td { padding:.7rem 1rem; border-bottom:1px solid var(--border); color:var(--ink2); vertical-align:top; line-height:1.55; }
+    .checklist tr:last-child td { border-bottom:none; }
+    .badge-pass { background:rgba(46,125,82,0.12); color:#2e7d52; border-radius:999px; padding:.15rem .55rem; font-size:.7rem; font-weight:600; white-space:nowrap; }
+    .badge-fail { background:rgba(200,64,64,0.12); color:#c84040; border-radius:999px; padding:.15rem .55rem; font-size:.7rem; font-weight:600; white-space:nowrap; }
+    [data-theme="dark"] .badge-pass { color:#5ecb8a; }
+    [data-theme="dark"] .badge-fail { color:#f08080; }
+
+    /* Compliance grid */
+    .compliance-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin:1.25rem 0; }
+    .compliance-card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:1.25rem; }
+    .compliance-card h4 { font-family:'Syne',sans-serif; font-size:.82rem; font-weight:700; color:var(--cyber); margin-bottom:.75rem; text-transform:uppercase; letter-spacing:.06em; }
+    .comp-item { display:flex; align-items:flex-start; gap:.5rem; font-size:.78rem; color:var(--ink2); line-height:1.5; margin-bottom:.5rem; }
+    .comp-item:last-child { margin-bottom:0; }
+    .comp-icon { flex-shrink:0; margin-top:.05em; }
+
+    .findings-list { display:flex; flex-direction:column; gap:.6rem; margin:1rem 0; }
+    .finding-item { display:flex; align-items:flex-start; gap:.75rem; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:.85rem 1rem; font-size:.88rem; color:var(--ink2); line-height:1.6; }
+    .finding-item::before { content:'→'; color:var(--cyber); font-size:.8rem; flex-shrink:0; margin-top:.1em; }
+
+    .case-cta { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; margin-top:2.5rem; }
+    .btn-cyber { background:var(--cyber); color:#fff; display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1.75rem; border-radius:999px; font-family:'DM Sans',sans-serif; font-size:.9rem; font-weight:500; transition:all .25s; border:none; cursor:pointer; }
+    .btn-cyber:hover { opacity:.88; transform:translateY(-2px); }
+
+    .next-project { border-top:1px solid var(--border); padding:clamp(2rem,4vw,3.5rem) clamp(1.5rem,7vw,6rem); display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; position:relative; z-index:1; }
+    .next-label { font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink3); margin-bottom:.4rem; }
+    .next-title { font-family:'Syne',sans-serif; font-size:1.4rem; font-weight:800; color:var(--ink); transition:color .2s; }
+    .next-project:hover .next-title { color:var(--cyber); }
+
+    @media(max-width:768px){ .case-hero-inner{grid-template-columns:1fr;} .case-meta{align-items:flex-start;flex-direction:row;flex-wrap:wrap;} .compliance-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">KYR17N</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#work">Design Work</a></li>
+    <li><a href="index.html#cyber">Security</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="theme-label" id="theme-label">Light</span>
+    <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode"></button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html" onclick="closeMobile()">Home</a>
+  <a href="index.html#work" onclick="closeMobile()">Design Work</a>
+  <a href="index.html#cyber" onclick="closeMobile()">Security</a>
+  <a href="index.html#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<main>
+  <div class="case-hero reveal">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span><a href="index.html#cyber">Security</a><span>/</span>Security Audit
+    </div>
+    <div class="case-hero-inner">
+      <div>
+        <span class="case-tag">Security Audit · Risk Assessment</span>
+        <h1 class="case-title">Security Audit<br>Botium Toys</h1>
+        <p class="case-subtitle">Conducted a full internal security audit for Botium Toys — assessing their assets, controls, and compliance posture across PCI DSS, GDPR, and SOC standards, producing a risk assessment and actionable recommendations.</p>
+      </div>
+      <div class="case-meta">
+        <div class="meta-pill"><div class="meta-pill-label">Risk Score</div><div class="meta-pill-value">8 / 10</div></div>
+        <div class="meta-pill"><div class="meta-pill-label">Standards</div><div class="meta-pill-value">PCI DSS · GDPR · SOC</div></div>
+        <div class="meta-pill"><div class="meta-pill-label">Framework</div><div class="meta-pill-value">NIST CSF</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-body">
+    <div class="case-section reveal">
+      <p class="case-section-label">Overview</p>
+      <h2 class="case-section-title">Scope & Goals</h2>
+      <p>The scope of this audit covered the entire security programme at Botium Toys — including all employee equipment and devices, the internal network, and all systems and services managed by the IT department.</p>
+      <p>The goal was to assess existing assets and complete a controls and compliance checklist, identifying which controls and best practices needed to be implemented to improve their overall security posture.</p>
+
+      <div class="risk-banner">
+        <div>
+          <div class="risk-score-num">8</div>
+          <div class="risk-score-label">Risk Score / 10</div>
+        </div>
+        <div class="risk-score-desc">Rated fairly high due to a significant lack of security controls and non-adherence to compliance best practices. The potential for data loss, financial penalty, and reputational damage was assessed as substantial.</div>
+      </div>
+    </div>
+
+    <div class="case-section reveal">
+      <p class="case-section-label">Controls Assessment</p>
+      <h2 class="case-section-title">Controls Checklist</h2>
+      <table class="checklist">
+        <thead><tr><th>Control</th><th>Status</th><th>Finding</th></tr></thead>
+        <tbody>
+          <tr><td>Firewall</td><td><span class="badge-pass">✓ Pass</span></td><td>Existing firewall blocks traffic based on an appropriately defined set of security rules.</td></tr>
+          <tr><td>Antivirus Software</td><td><span class="badge-pass">✓ Pass</span></td><td>Installed and monitored regularly by the IT department.</td></tr>
+          <tr><td>Locks (offices, storefront, warehouse)</td><td><span class="badge-pass">✓ Pass</span></td><td>Physical locations have sufficient locks in place.</td></tr>
+          <tr><td>CCTV Surveillance</td><td><span class="badge-pass">✓ Pass</span></td><td>CCTV is installed and functioning at all physical locations.</td></tr>
+          <tr><td>Fire Detection/Prevention</td><td><span class="badge-pass">✓ Pass</span></td><td>Fire alarm and sprinkler system are operational.</td></tr>
+          <tr><td>Least Privilege</td><td><span class="badge-fail">✗ Fail</span></td><td>All employees currently have access to all internal data including customer PII and cardholder data. Privileges must be restricted.</td></tr>
+          <tr><td>Separation of Duties</td><td><span class="badge-fail">✗ Fail</span></td><td>The CEO currently manages both day-to-day operations and payroll, creating fraud risk.</td></tr>
+          <tr><td>Intrusion Detection System (IDS)</td><td><span class="badge-fail">✗ Fail</span></td><td>No IDS in place — the organisation cannot detect potential intrusions by threat actors.</td></tr>
+          <tr><td>Disaster Recovery Plans</td><td><span class="badge-fail">✗ Fail</span></td><td>No disaster recovery plans exist. Business continuity is at serious risk in the event of an incident.</td></tr>
+          <tr><td>Encryption</td><td><span class="badge-fail">✗ Fail</span></td><td>Credit card data is accepted, processed, and stored without encryption. Confidentiality of customer financial data is not assured.</td></tr>
+          <tr><td>Password Management System</td><td><span class="badge-fail">✗ Fail</span></td><td>No centralised password management system. Current password policy requirements are nominal and below minimum complexity standards.</td></tr>
+          <tr><td>Legacy System Maintenance</td><td><span class="badge-fail">✗ Fail</span></td><td>No regular maintenance schedule. Intervention procedures are unclear, leaving legacy systems at elevated risk.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="case-section reveal">
+      <p class="case-section-label">Compliance Assessment</p>
+      <h2 class="case-section-title">Compliance Checklist</h2>
+      <div class="compliance-grid">
+        <div class="compliance-card">
+          <h4>PCI DSS</h4>
+          <div class="comp-item"><span class="comp-icon">❌</span>Authorised-only access to credit card data — all employees currently have access.</div>
+          <div class="comp-item"><span class="comp-icon">❌</span>Secure environment for card data — no encryption in place.</div>
+          <div class="comp-item"><span class="comp-icon">❌</span>Data encryption procedures — not implemented.</div>
+          <div class="comp-item"><span class="comp-icon">❌</span>Secure password management policies — not in place.</div>
+        </div>
+        <div class="compliance-card">
+          <h4>GDPR</h4>
+          <div class="comp-item"><span class="comp-icon">❌</span>EU customer data kept private/secured — encryption not used.</div>
+          <div class="comp-item"><span class="comp-icon">✅</span>72-hour breach notification plan — plan exists for EU customers.</div>
+          <div class="comp-item"><span class="comp-icon">❌</span>Data properly classified and inventoried — assets listed but not classified.</div>
+          <div class="comp-item"><span class="comp-icon">✅</span>Privacy policies enforced — developed and enforced across IT and staff.</div>
+        </div>
+        <div class="compliance-card">
+          <h4>SOC Type 1 & 2</h4>
+          <div class="comp-item"><span class="comp-icon">❌</span>User access policies established — least privilege and separation of duties not implemented.</div>
+          <div class="comp-item"><span class="comp-icon">❌</span>PII/SPII kept confidential — encryption not in use.</div>
+          <div class="comp-item"><span class="comp-icon">✅</span>Data integrity — in place and maintained by IT.</div>
+          <div class="comp-item"><span class="comp-icon">❌</span>Data available only to authorised users — all employees have unrestricted access.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-section reveal">
+      <p class="case-section-label">Recommendations</p>
+      <h2 class="case-section-title">Priority Controls to Implement</h2>
+      <div class="findings-list">
+        <div class="finding-item">Implement <strong>Least Privilege</strong> — restrict employee access to only the data and systems needed for their role.</div>
+        <div class="finding-item">Establish <strong>Disaster Recovery Plans</strong> to ensure business continuity in the event of a breach or system failure.</div>
+        <div class="finding-item">Enforce a robust <strong>Password Policy</strong> with minimum complexity requirements and a centralised password management system.</div>
+        <div class="finding-item">Implement <strong>Separation of Duties</strong> — the CEO should not control both operations and payroll.</div>
+        <div class="finding-item">Deploy an <strong>Intrusion Detection System (IDS)</strong> to identify potential threat actor activity on the network.</div>
+        <div class="finding-item">Enable <strong>Encryption</strong> across all credit card data touchpoints — at rest and in transit.</div>
+        <div class="finding-item">Establish a <strong>Legacy System Maintenance Schedule</strong> with clear intervention procedures and responsible owners.</div>
+        <div class="finding-item"><strong>Classify existing assets</strong> to understand business impact of loss and identify additional controls required.</div>
+      </div>
+    </div>
+
+    <div class="case-cta reveal">
+      <a href="https://drive.google.com/file/d/1n7Ry7GU1mRFbPpHxlZmJxML2veDJJ3WC/view?usp=drive_link" target="_blank" rel="noopener" class="btn-cyber">Download Full Audit Report ↗</a>
+      <a href="index.html#cyber" class="btn btn-outline">← Back to Security</a>
+    </div>
+  </div>
+
+  <a href="cyber-network-hardening.html" class="next-project">
+    <div><div class="next-label">Next Project</div><div class="next-title">Network Hardening →</div></div>
+  </a>
+</main>
+
+<footer>
+  <p class="footer-copy">© 2024 Kyrian Okeke. All rights reserved.</p>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/kyrianokeke/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">in</a>
+    <a href="https://twitter.com/kyrianokeke/" target="_blank" rel="noopener" class="social-link" aria-label="Twitter / X">𝕏</a>
+    <a href="https://github.com/Kyr17n" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">⌥</a>
+  </div>
+</footer>
+<button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<script src="assets/js/shared-nav.js"></script>
+</body>
+</html>
