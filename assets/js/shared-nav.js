@@ -28,7 +28,7 @@
   document.querySelectorAll('.reveal').forEach(el => {
     new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.12 }).observe(el);
+    }, { threshold: 0 }).observe(el);
   });
 
   // Back to top
