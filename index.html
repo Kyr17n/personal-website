@@ -217,6 +217,29 @@
       margin-bottom: 1.5rem;
     }
     .hero-tagline span { color: var(--accent); }
+    .hero-typewriter {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--ink2);
+      margin-bottom: 1rem;
+      min-height: 1.5em;
+    }
+    .typewriter-role {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .typewriter-cursor {
+      color: var(--accent);
+      font-weight: 400;
+      animation: blink-cursor 0.9s step-end infinite;
+    }
+    @keyframes blink-cursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .typewriter-cursor { animation: none; }
+    }
     .hero-role {
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: var(--surface);
@@ -736,6 +759,7 @@
   <!-- HERO -->
   <section id="about">
     <div class="hero-text reveal">
+      <p class="hero-typewriter">I'm Kyrian Okeke, <span id="typewriter-role" class="typewriter-role"></span><span class="typewriter-cursor">|</span></p>
       <div class="hero-role">Open to new projects</div>
       <h1 class="hero-tagline">Design.<br><span>Deploy.</span><br>Deliver.</h1>
       <p class="hero-bio">
@@ -1069,6 +1093,46 @@
 <button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <script>
+  // Typewriter effect
+  (function () {
+    const el = document.getElementById('typewriter-role');
+    if (!el) return;
+    const roles = ['a UI/UX Designer', 'a Web Developer', 'an AI Trainer'];
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      el.textContent = roles[0];
+      return;
+    }
+    let roleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function tick() {
+      const current = roles[roleIndex];
+      if (!deleting) {
+        charIndex++;
+        el.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(tick, 1500);
+          return;
+        }
+        setTimeout(tick, 75);
+      } else {
+        charIndex--;
+        el.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          setTimeout(tick, 300);
+          return;
+        }
+        setTimeout(tick, 40);
+      }
+    }
+    tick();
+  })();
+
   // Theme toggle
   const root = document.documentElement;
   const btn = document.getElementById('theme-toggle');
