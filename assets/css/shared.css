@@ -63,11 +63,13 @@ nav {
   transition: background var(--transition);
 }
 .nav-logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 1.3rem;
-  letter-spacing: -0.03em;
-  color: var(--accent);
+  display: flex;
+  align-items: center;
+}
+.nav-logo img {
+  height: 22px;
+  width: auto;
+  display: block;
 }
 .nav-links {
   display: flex; align-items: center; gap: 2rem;
