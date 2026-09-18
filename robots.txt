@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kyr17n.github.io/personal-website/sitemap.xml
+Sitemap: https://portfolio.kyr17n.workers.dev/sitemap.xml
