@@ -110,11 +110,13 @@
       transition: background var(--transition);
     }
     .nav-logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.3rem;
-      letter-spacing: -0.03em;
-      color: var(--accent);
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo img {
+      height: 22px;
+      width: auto;
+      display: block;
     }
     .nav-links {
       display: flex; align-items: center; gap: 2rem;
@@ -701,7 +703,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#about" class="nav-logo">KYR17N</a>
+  <a href="#about" class="nav-logo"><img src="assets/img/nav-logo.png" width="348" height="90" alt="KYR17N" /></a>
   <ul class="nav-links">
     <li><a href="#about">Home</a></li>
     <li><a href="#skills">Skills</a></li>
