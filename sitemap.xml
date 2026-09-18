@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://portfolio.kyr17n.workers.dev/</loc>
+    <loc>https://personal-website.kyr17n.workers.dev/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://portfolio.kyr17n.workers.dev/comxo.html</loc>
+    <loc>https://personal-website.kyr17n.workers.dev/comxo.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://portfolio.kyr17n.workers.dev/sendit.html</loc>
+    <loc>https://personal-website.kyr17n.workers.dev/sendit.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://portfolio.kyr17n.workers.dev/vault.html</loc>
+    <loc>https://personal-website.kyr17n.workers.dev/vault.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://portfolio.kyr17n.workers.dev/oldfashioned.html</loc>
+    <loc>https://personal-website.kyr17n.workers.dev/oldfashioned.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://portfolio.kyr17n.workers.dev/shaz.html</loc>
+    <loc>https://personal-website.kyr17n.workers.dev/shaz.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
