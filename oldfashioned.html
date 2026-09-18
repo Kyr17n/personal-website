@@ -54,6 +54,10 @@
     .case-title {
       font-size: clamp(2.4rem,5vw,4.5rem); font-weight: 800;
       letter-spacing: -0.04em; line-height: 1.0; margin-bottom: 1rem;
+      overflow-wrap: break-word; word-break: break-word;
+    }
+    @media (max-width: 380px) {
+      .case-title { font-size: clamp(1.9rem, 9vw, 3rem); }
     }
     .case-subtitle {
       font-size: 1.05rem; color: var(--ink2); line-height: 1.7; max-width: 600px;
