@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kyrian Okeke — UI/UX Product Designer & AI Trainer</title>
-  <meta name="description" content="Kyrian Okeke is a UI/UX product designer with 5+ years of experience designing digital products, also working as an AI trainer — writing prompts and evaluating model outputs." />
+  <title>Kyrian Okeke — UI/UX Designer, Web Developer & AI Trainer</title>
+  <meta name="description" content="Kyrian Okeke is a UI/UX designer and web developer with 5+ years of experience designing and building digital products, also working as an AI trainer — writing prompts and evaluating model outputs." />
+  <meta name="keywords" content="UI/UX Designer, Web Developer, AI Trainer, Product Designer, Frontend Developer, Kyrian Okeke" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Kyrian Okeke" />
   <link rel="canonical" href="https://personal-website.kyr17n.workers.dev/" />
-  <link rel="icon" href="assets/img/favicon.ico" />
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/img/favicon-32.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Kyrian Okeke — UI/UX Product Designer & AI Trainer" />
-  <meta property="og:description" content="UI/UX product designer with 5+ years of experience crafting intuitive interfaces, also working as an AI trainer evaluating model outputs and writing prompts." />
+  <meta property="og:title" content="Kyrian Okeke — UI/UX Designer, Web Developer & AI Trainer" />
+  <meta property="og:description" content="UI/UX designer and web developer with 5+ years of experience crafting intuitive interfaces and building digital products, also working as an AI trainer evaluating model outputs and writing prompts." />
   <meta property="og:image" content="https://personal-website.kyr17n.workers.dev/assets/img/hero-image2.jpg" />
   <meta property="og:url" content="https://personal-website.kyr17n.workers.dev/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kyrian Okeke — UI/UX Product Designer & AI Trainer" />
-  <meta name="twitter:description" content="UI/UX product designer with 5+ years of experience crafting intuitive interfaces, also working as an AI trainer evaluating model outputs and writing prompts." />
+  <meta name="twitter:title" content="Kyrian Okeke — UI/UX Designer, Web Developer & AI Trainer" />
+  <meta name="twitter:description" content="UI/UX designer and web developer with 5+ years of experience crafting intuitive interfaces and building digital products, also working as an AI trainer evaluating model outputs and writing prompts." />
   <meta name="twitter:image" content="https://personal-website.kyr17n.workers.dev/assets/img/hero-image2.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,8 +35,8 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Kyrian Okeke",
-    "jobTitle": "UI/UX Product Designer & AI Trainer",
-    "description": "UI/UX product designer with 5+ years of experience, also working as an AI trainer.",
+    "jobTitle": "UI/UX Designer, Web Developer & AI Trainer",
+    "description": "UI/UX designer and web developer with 5+ years of experience, also working as an AI trainer.",
     "url": "https://personal-website.kyr17n.workers.dev/",
     "image": "https://personal-website.kyr17n.workers.dev/assets/img/hero-image2.jpg",
     "sameAs": [
@@ -217,6 +219,29 @@
       margin-bottom: 1.5rem;
     }
     .hero-tagline span { color: var(--accent); }
+    .hero-typewriter {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--ink2);
+      margin-bottom: 1rem;
+      min-height: 1.5em;
+    }
+    .typewriter-role {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .typewriter-cursor {
+      color: var(--accent);
+      font-weight: 400;
+      animation: blink-cursor 0.9s step-end infinite;
+    }
+    @keyframes blink-cursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .typewriter-cursor { animation: none; }
+    }
     .hero-role {
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: var(--surface);
@@ -736,6 +761,7 @@
   <!-- HERO -->
   <section id="about">
     <div class="hero-text reveal">
+      <p class="hero-typewriter">I'm Kyrian Okeke, <span id="typewriter-role" class="typewriter-role"></span><span class="typewriter-cursor">|</span></p>
       <div class="hero-role">Open to new projects</div>
       <h1 class="hero-tagline">Design.<br><span>Deploy.</span><br>Deliver.</h1>
       <p class="hero-bio">
@@ -750,7 +776,7 @@
       <img
         class="hero-img"
         src="https://personal-website.kyr17n.workers.dev/assets/img/hero-image2.jpg"
-        alt="Kyrian Okeke — UI/UX Product Designer and AI Trainer"
+        alt="Kyrian Okeke — UI/UX Designer, Web Developer and AI Trainer"
         width="1000"
         height="950"
         loading="eager"
@@ -1069,6 +1095,46 @@
 <button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <script>
+  // Typewriter effect
+  (function () {
+    const el = document.getElementById('typewriter-role');
+    if (!el) return;
+    const roles = ['a UI/UX Designer', 'a Web Developer', 'an AI Trainer'];
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      el.textContent = roles[0];
+      return;
+    }
+    let roleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function tick() {
+      const current = roles[roleIndex];
+      if (!deleting) {
+        charIndex++;
+        el.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(tick, 1500);
+          return;
+        }
+        setTimeout(tick, 130);
+      } else {
+        charIndex--;
+        el.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          setTimeout(tick, 300);
+          return;
+        }
+        setTimeout(tick, 40);
+      }
+    }
+    tick();
+  })();
+
   // Theme toggle
   const root = document.documentElement;
   const btn = document.getElementById('theme-toggle');
