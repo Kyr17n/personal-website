@@ -3,20 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kyrian Okeke — Product Designer / Cyber Security Analyst</title>
-  <meta name="description" content="Kyrian Okeke is a product designer with 5+ years of experience, pivoting to secure digital environments." />
+  <title>Kyrian Okeke — IT Professional & UI/UX Product Designer</title>
+  <meta name="description" content="Kyrian Okeke is an IT professional and UI/UX product designer with 5+ years of experience designing digital products, supporting IT systems, and working as an AI trainer." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Kyrian Okeke" />
+  <link rel="canonical" href="https://kyr17n.github.io/personal-website/" />
+  <link rel="icon" href="assets/img/favicon.ico" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Kyrian Okeke — Product Designer & Developer" />
-  <meta property="og:description" content="Product designer and frontend developer crafting intuitive interfaces and scalable digital products." />
-  <meta property="og:image" content="https://kyr17n.github.io/personal-website/assets/img/hero-image2.png" />
+  <meta property="og:title" content="Kyrian Okeke — IT Professional & UI/UX Product Designer" />
+  <meta property="og:description" content="IT professional and UI/UX product designer with 5+ years of experience crafting intuitive interfaces, supporting IT systems, and training AI models." />
+  <meta property="og:image" content="https://kyr17n.github.io/personal-website/assets/img/hero-image2.jpg" />
   <meta property="og:url" content="https://kyr17n.github.io/personal-website/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kyrian Okeke — IT Professional & UI/UX Product Designer" />
+  <meta name="twitter:description" content="IT professional and UI/UX product designer with 5+ years of experience crafting intuitive interfaces, supporting IT systems, and training AI models." />
+  <meta name="twitter:image" content="https://kyr17n.github.io/personal-website/assets/img/hero-image2.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://kyr17n.github.io/personal-website/assets/img/hero-image2.jpg" fetchpriority="high" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kyrian Okeke",
+    "jobTitle": "IT Professional & UI/UX Product Designer",
+    "description": "IT professional and UI/UX product designer with 5+ years of experience, also working as an AI trainer.",
+    "url": "https://kyr17n.github.io/personal-website/",
+    "image": "https://kyr17n.github.io/personal-website/assets/img/hero-image2.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/kyrianokeke/",
+      "https://github.com/Kyr17n",
+      "https://twitter.com/kyrianokeke/"
+    ]
+  }
+  </script>
 
   <style>
     /* ── TOKENS ── */
@@ -555,85 +579,6 @@
     .form-group textarea:focus { border-color: var(--accent); }
     .form-group textarea { min-height: 100px; }
 
-    /* ── CYBER SECURITY ── */
-    #cyber { background: var(--bg); }
-    .cyber-header {
-      display: flex; justify-content: space-between; align-items: flex-end;
-      margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;
-    }
-    .cyber-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800; letter-spacing: -0.03em; line-height: 1.1;
-    }
-    .cyber-intro {
-      font-size: 0.97rem; line-height: 1.75; color: var(--ink2);
-      max-width: 640px; margin-bottom: 2.5rem;
-    }
-    .cyber-tag {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
-      color: #2e7d52;
-      background: rgba(46,125,82,0.1);
-      border-radius: 999px; padding: 0.25rem 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-    [data-theme="dark"] .cyber-tag { color: #5ecb8a; background: rgba(94,203,138,0.1); }
-    .cyber-tag::before {
-      content: ''; width: 6px; height: 6px; border-radius: 50%;
-      background: #2e7d52; flex-shrink: 0;
-    }
-    [data-theme="dark"] .cyber-tag::before { background: #5ecb8a; }
-
-    .cyber-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-    .cyber-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      display: flex; flex-direction: column; gap: 0.75rem;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .cyber-card:hover { border-color: #2e7d52; transform: translateY(-3px); }
-    [data-theme="dark"] .cyber-card:hover { border-color: #5ecb8a; }
-    .cyber-card-icon {
-      width: 40px; height: 40px;
-      border-radius: 10px;
-      background: rgba(46,125,82,0.1);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.15rem;
-      flex-shrink: 0;
-    }
-    [data-theme="dark"] .cyber-card-icon { background: rgba(94,203,138,0.1); }
-    .cyber-card-name {
-      font-family: 'Syne', sans-serif;
-      font-size: 0.95rem; font-weight: 700; line-height: 1.3;
-    }
-    .cyber-card-desc {
-      font-size: 0.82rem; color: var(--ink3); line-height: 1.6; flex: 1;
-    }
-    .cyber-card-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      font-size: 0.78rem; font-weight: 500;
-      color: #2e7d52;
-      transition: gap 0.2s;
-    }
-    [data-theme="dark"] .cyber-card-link { color: #5ecb8a; }
-    .cyber-card-link:hover { gap: 0.65rem; }
-    .cyber-card-link.no-file {
-      color: var(--ink3); pointer-events: none;
-    }
-    .cyber-full-link {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 900px) { .cyber-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 560px) { .cyber-grid { grid-template-columns: 1fr; } }
-
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -716,7 +661,6 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#work">Design Works</a></li>
-    <li><a href="#cyber">Security Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
@@ -734,7 +678,6 @@
   <a href="#skills" onclick="closeMobile()">Skills</a>
   <a href="#experience" onclick="closeMobile()">Experience</a>
   <a href="#work" onclick="closeMobile()">Design Works</a>
-  <a href="#cyber" onclick="closeMobile()">Security Projects</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
 
@@ -743,10 +686,10 @@
   <!-- HERO -->
   <section id="about">
     <div class="hero-text reveal">
-      <div class="hero-role">Open to Cyber Security Roles</div>
-      <h1 class="hero-tagline">Design.<br><span>Deploy.</span><br>Defend.</h1>
+      <div class="hero-role">Open to IT & Product Design Roles</div>
+      <h1 class="hero-tagline">Design.<br><span>Build.</span><br>Train.</h1>
       <p class="hero-bio">
-        Versatile professional with over 5 years of experience designing and developing user-facing digital products, currently pivoting into Cyber Security. Combines a deep technical knowledge of frontend architectures and application vulnerabilities with a user-centric mindset. Adept at analyzing code for security flaws, understanding human-factor risks, and ensuring digital interfaces are both highly secure and seamless to navigate. Proven track record of aligning technical execution with business goals, now focused on defending digital assets.
+        Versatile IT professional and UI/UX product designer with over 5 years of experience designing user-facing digital products and supporting the technical systems behind them. Combines hands-on IT and systems know-how with a user-centric design mindset, and works as an AI trainer — evaluating model outputs, writing prompts, and helping shape how AI systems reason and respond. Proven track record of aligning technical execution with business goals across design, IT, and AI.
       </p>
       <div class="hero-cta">
         <a href="#work" class="btn btn-primary">View My Work →</a>
@@ -756,9 +699,13 @@
     <div class="hero-image-wrap reveal" style="transition-delay:0.15s">
       <img
         class="hero-img"
-        src="https://kyr17n.github.io/personal-website/assets/img/hero-image2.png"
-        alt="Kyrian Okeke — Product Designer and Developer"
+        src="https://kyr17n.github.io/personal-website/assets/img/hero-image2.jpg"
+        alt="Kyrian Okeke — IT Professional and UI/UX Product Designer"
+        width="1000"
+        height="667"
         loading="eager"
+        fetchpriority="high"
+        decoding="async"
       />
       <div class="hero-stats">
         <div class="stat-chip">
@@ -851,18 +798,16 @@
 
     <div class="skills-cols reveal" style="transition-delay:0.2s">
        <div class="skills-card">
-        <h4>Cyber Security Skills</h4>
+        <h4>IT & AI Training Skills</h4>
         <ul>
-          <li class="skill-item">NIST Cybersecurity Framework, ISO 27001, SOC1, SOC2</li>
-          <li class="skill-item">SIEM tools such as Azure Sentinel, Splunk</li>
-          <li class="skill-item">Network security protocols and technologies (TCP/IP, VPN, IDS/IPS Firewalls, Defender).</li>
-          <li class="skill-item">Network traffic analysis and packetcapture tools (e.g., Wireshark, tcpdump).</li>
-          <li class="skill-item">Linux System Administration</li>
-          <li class="skill-item">Microsoft Active Directory</li>
-          <li class="skill-item">Windows Event log analysis using Sysmon and Tracing for Windows (ETW)</li>
-          <li class="skill-item">Security compliance frameworks and regulations specific to your industry (e.g., GDPR, HIPAA).</li>
-          <li class="skill-item">Scripting and Query languages such as Python, PowerShell, BashShell, SQL for automation and Database management</li>
-          <li class="skill-item">Cloud security principles and technologies, including AWS, Azure, or Google Cloud Platform..</li>
+          <li class="skill-item">IT support & systems administration (Windows, Linux, Active Directory)</li>
+          <li class="skill-item">Cloud platforms — AWS, Azure, Google Cloud Platform</li>
+          <li class="skill-item">Scripting & automation — Python, PowerShell, Bash, SQL</li>
+          <li class="skill-item">Hardware, software & network troubleshooting</li>
+          <li class="skill-item">AI model training — prompt writing and response evaluation</li>
+          <li class="skill-item">Reinforcement learning from human feedback (RLHF) workflows</li>
+          <li class="skill-item">LLM output review, grading, and quality assurance</li>
+          <li class="skill-item">Technical documentation & IT service delivery</li>
         </ul>
       </div>
       <div class="skills-card">
@@ -930,7 +875,7 @@
     <div class="projects-grid">
       <a href="https://kyr17n.github.io/personal-website/comxo.html" class="project-card reveal" style="transition-delay:0.05s">
         <div class="project-img-wrap">
-          <img src="https://kyr17n.github.io/personal-website/assets/img/projects/Comxo/comxo-cover.png" alt="ComXo Rebrand project cover" loading="lazy" />
+          <img src="https://kyr17n.github.io/personal-website/assets/img/projects/Comxo/comxo-cover.jpg" alt="ComXo Rebrand project cover" loading="lazy" />
         </div>
         <div class="project-info">
           <span class="project-tag">Website Design</span>
@@ -941,7 +886,7 @@
 
       <a href="https://kyr17n.github.io/personal-website/sendit.html" class="project-card reveal" style="transition-delay:0.1s">
         <div class="project-img-wrap">
-          <img src="https://kyr17n.github.io/personal-website/assets/img/projects/Sendit/sendit-cover.png" alt="SendIT delivery app product design" loading="lazy" />
+          <img src="https://kyr17n.github.io/personal-website/assets/img/projects/Sendit/sendit-cover.jpg" alt="SendIT delivery app product design" loading="lazy" />
         </div>
         <div class="project-info">
           <span class="project-tag">Product Design</span>
@@ -952,7 +897,7 @@
 
       <a href="https://kyr17n.github.io/personal-website/vault.html" class="project-card reveal" style="transition-delay:0.15s">
         <div class="project-img-wrap">
-          <img src="https://kyr17n.github.io/personal-website/assets/img/projects/Vault/vault-cover.png" alt="Vault finance app product design" loading="lazy" />
+          <img src="https://kyr17n.github.io/personal-website/assets/img/projects/Vault/vault-cover.jpg" alt="Vault finance app product design" loading="lazy" />
         </div>
         <div class="project-info">
           <span class="project-tag">Product Design</span>
@@ -963,7 +908,7 @@
 
       <a href="https://kyr17n.github.io/personal-website/oldfashioned.html" class="project-card reveal" style="transition-delay:0.2s">
         <div class="project-img-wrap">
-          <img src="https://kyr17n.github.io/personal-website/assets/img/projects/Oldfashioned/oldfashioned-cover.png" alt="Oldfashioned vintage clothing app product design" loading="lazy" />
+          <img src="https://kyr17n.github.io/personal-website/assets/img/projects/Oldfashioned/oldfashioned-cover.jpg" alt="Oldfashioned vintage clothing app product design" loading="lazy" />
         </div>
         <div class="project-info">
           <span class="project-tag">Product Design</span>
@@ -971,73 +916,6 @@
           <p class="project-desc">A vintage clothing discovery and resale app with a rich, editorial aesthetic — pairing warm typography with immersive photography.</p>
         </div>
       </a>
-    </div>
-  </section>
-
-  <!-- CYBER SECURITY -->
-  <section id="cyber">
-    <div class="cyber-header reveal">
-      <div>
-       <p class="section-label">Selected projects</p>
-        <h2 class="cyber-title">Cyber Security<br>Projects</h2>
-      </div>
-     <!--  <a href="https://kyr17n.wixstudio.com/mysite/projects" target="_blank" rel="noopener" class="btn btn-outline">Full Security Portfolio ↗</a> -->
-    </div>
-    <p class="cyber-intro reveal">
-      Alongside my design work, I'm actively transitioning into cyber security. I'm pursuing certifications and working through hands-on projects spanning incident response, network security, Linux administration, and threat analysis. Here's a snapshot of that work.
-    </p>
-
-    <div class="cyber-grid">
-
-      <a href="cyber-incident-report.html" class="cyber-card reveal" style="transition-delay:0.05s">
-        <div class="cyber-card-icon">🛡️</div>
-        <div class="cyber-card-name">Incident Report Analysis</div>
-        <p class="cyber-card-desc">Analysed a DDoS attack on an organisation's network using the NIST Cybersecurity Framework to structure the incident response and recommendations.</p>
-        <span class="cyber-card-link">View Case Study →</span>
-      </a>
-
-      <a href="cyber-linux-permissions.html" class="cyber-card reveal" style="transition-delay:0.1s">
-        <div class="cyber-card-icon">🐧</div>
-        <div class="cyber-card-name">File Permissions in Linux</div>
-        <p class="cyber-card-desc">Used Linux commands to manage and harden file permissions for users and groups, enforcing the principle of least privilege across a simulated environment.</p>
-        <span class="cyber-card-link">View Case Study →</span>
-      </a>
-
-      <a href="cyber-security-audit.html" class="cyber-card reveal" style="transition-delay:0.15s">
-        <div class="cyber-card-icon">🔍</div>
-        <div class="cyber-card-name">Security Audit — Botium Toys</div>
-        <p class="cyber-card-desc">Conducted a full internal security audit for Botium Toys, identifying risks, threats, and vulnerabilities across their assets and recommending controls.</p>
-        <span class="cyber-card-link">View Case Study →</span>
-      </a>
-
-      <a href="cyber-network-hardening.html" class="cyber-card reveal" style="transition-delay:0.2s">
-        <div class="cyber-card-icon">🔒</div>
-        <div class="cyber-card-name">Network Hardening</div>
-        <p class="cyber-card-desc">Strengthened an organisation's network security posture following a breach — analysing the attack surface and implementing hardening measures to reduce future risk.</p>
-        <span class="cyber-card-link">View Case Study →</span>
-      </a>
-
-      <a href="cyber-tcpdump.html" class="cyber-card reveal" style="transition-delay:0.25s">
-        <div class="cyber-card-icon">📡</div>
-        <div class="cyber-card-name">tcpdump — Traffic Analysis</div>
-        <p class="cyber-card-desc">Used tcpdump to capture and analyse live TCP traffic, identifying patterns and anomalies to support network monitoring and threat detection workflows.</p>
-        <span class="cyber-card-link">View Case Study →</span>
-      </a>
-
-      <div class="cyber-card reveal" style="transition-delay:0.3s">
-        <div class="cyber-card-icon">🧱</div>
-        <div class="cyber-card-name">Microsoft Firewall Configuration</div>
-        <p class="cyber-card-desc">Enabled and configured Windows Firewall rules to control inbound and outbound traffic, reducing the attack surface on a Windows environment.</p>
-        <span class="cyber-card-link no-file">Report coming soon</span>
-      </div>
-
-      <div class="cyber-card reveal" style="transition-delay:0.35s">
-        <div class="cyber-card-icon">🛡</div>
-        <div class="cyber-card-name">Microsoft Defender Setup</div>
-        <p class="cyber-card-desc">Configured and updated Microsoft Defender to ensure real-time protection, scheduled scanning, and up-to-date threat definitions across a managed device.</p>
-        <span class="cyber-card-link no-file">Report coming soon</span>
-      </div>
-
     </div>
   </section>
 
@@ -1090,7 +968,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p class="footer-copy">© 2024 Kyrian Okeke. All rights reserved.</p>
+  <p class="footer-copy">© 2026 Kyrian Okeke. All rights reserved.</p>
   <div class="social-links">
     <a href="https://www.linkedin.com/in/kyrianokeke/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">in</a>
     <a href="https://twitter.com/kyrianokeke/" target="_blank" rel="noopener" class="social-link" aria-label="Twitter / X">𝕏</a>
