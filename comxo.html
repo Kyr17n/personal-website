@@ -4,19 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ComXo Website Rebrand — Kyrian Okeke</title>
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/img/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <meta name="description" content="A full brand and website redesign for ComXo, a B2B communications platform — by Kyrian Okeke, Product Designer." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://personal-website.kyr17n.workers.dev/comxo.html" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="ComXo Website Rebrand — Kyrian Okeke" />
   <meta property="og:description" content="Full brand and website redesign for a B2B communications platform." />
-  <meta property="og:image" content="https://kyr17n.github.io/personal-website/assets/img/projects/Comxo/comxo 1.png" />
-  <meta property="og:url" content="https://kyr17n.github.io/personal-website/comxo.html" />
+  <meta property="og:image" content="https://personal-website.kyr17n.workers.dev/assets/img/projects/Comxo/comxo 1.png" />
+  <meta property="og:url" content="https://personal-website.kyr17n.workers.dev/comxo.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ComXo Website Rebrand — Kyrian Okeke" />
+  <meta name="twitter:description" content="Full brand and website redesign for a B2B communications platform." />
+  <meta name="twitter:image" content="https://personal-website.kyr17n.workers.dev/assets/img/projects/Comxo/comxo 1.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" /></noscript>
   <link rel="stylesheet" href="assets/css/shared.css" />
 
   <style>
@@ -60,6 +70,11 @@
       letter-spacing: -0.04em;
       line-height: 1.0;
       margin-bottom: 1rem;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    @media (max-width: 380px) {
+      .case-title { font-size: clamp(1.9rem, 9vw, 3rem); }
     }
     .case-subtitle {
       font-size: 1.05rem;
@@ -133,6 +148,7 @@
     /* Image layouts */
     .img-full {
       width: 100%;
+      height: auto;
       border-radius: var(--radius);
       border: 1px solid var(--border);
       margin-bottom: 1.5rem;
@@ -145,6 +161,7 @@
     }
     .img-grid-2 img {
       width: 100%;
+      height: auto;
       border-radius: var(--radius);
       border: 1px solid var(--border);
     }
@@ -178,7 +195,7 @@
       line-height: 1;
       margin-bottom: 0.5rem;
     }
-    .process-step h4 {
+    .process-step h3 {
       font-size: 0.88rem;
       font-weight: 700;
       margin-bottom: 0.4rem;
@@ -236,7 +253,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-logo">KYR17N</a>
+  <a href="index.html" class="nav-logo"><img src="assets/img/nav-logo.png" width="348" height="90" alt="KYR17N" /></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="index.html#work">Work</a></li>
@@ -294,7 +311,9 @@
   <!-- COVER IMAGE -->
   <img
     class="case-cover reveal"
-    src="assets/img/projects/Comxo/comxo-cover2.png"
+    src="assets/img/projects/Comxo/comxo-cover2.jpg"
+    width="1782"
+    height="1218"
     alt="ComXo website rebrand — hero screenshot of the new homepage design"
     loading="eager"
   />
@@ -317,22 +336,22 @@
       <div class="process-steps">
         <div class="process-step">
           <div class="process-num">01</div>
-          <h4>Discovery</h4>
+          <h3>Discovery</h3>
           <p>Stakeholder interviews, competitor audit, and user research to establish goals and constraints.</p>
         </div>
         <div class="process-step">
           <div class="process-num">02</div>
-          <h4>Sitemap</h4>
+          <h3>Sitemap</h3>
           <p>Restructured the information architecture to prioritise conversion and clarity for enterprise buyers.</p>
         </div>
         <div class="process-step">
           <div class="process-num">03</div>
-          <h4>Wireframes</h4>
+          <h3>Wireframes</h3>
           <p>Low and mid-fidelity wireframes explored layout options and validated structure early.</p>
         </div>
         <div class="process-step">
           <div class="process-num">04</div>
-          <h4>Final Design</h4>
+          <h3>Final Design</h3>
           <p>High-fidelity designs with a refined visual system, delivered ready for development handoff.</p>
         </div>
       </div>
@@ -346,12 +365,16 @@
       <img
         class="img-full"
         src="assets/img/projects/Comxo/sitemap_title.png"
+        width="1800"
+        height="442"
         alt="ComXo sitemap section header"
         loading="lazy"
       />
       <img
         class="img-full"
         src="assets/img/projects/Comxo/sitemap.png"
+        width="1800"
+        height="712"
         alt="ComXo full sitemap showing restructured information architecture"
         loading="lazy"
       />
@@ -365,18 +388,24 @@
       <img
         class="img-full"
         src="assets/img/projects/Comxo/Wireframe_title.png"
+        width="1800"
+        height="272"
         alt="ComXo wireframes section header"
         loading="lazy"
       />
       <img
         class="img-full"
         src="assets/img/projects/Comxo/wireframes.png"
+        width="1800"
+        height="2905"
         alt="ComXo desktop wireframes for the homepage and product pages"
         loading="lazy"
       />
       <img
         class="img-full"
         src="assets/img/projects/Comxo/wireframe 2.png"
+        width="1800"
+        height="2797"
         alt="ComXo secondary wireframes showing inner page layouts"
         loading="lazy"
       />
@@ -390,17 +419,23 @@
       <img
         class="img-full"
         src="assets/img/projects/Comxo/design_title.png"
+        width="1800"
+        height="266"
         alt="ComXo final designs section header"
         loading="lazy"
       />
       <div class="img-grid-2">
         <img
           src="assets/img/projects/Comxo/FINAL DESIGNS.png"
+          width="1800"
+          height="3113"
           alt="ComXo final homepage design — full page view"
           loading="lazy"
         />
         <img
           src="assets/img/projects/Comxo/comxo 5.png"
+          width="1800"
+          height="6669"
           alt="ComXo final inner page design showing product features section"
           loading="lazy"
         />
@@ -408,12 +443,16 @@
       <img
         class="img-full"
         src="assets/img/projects/Comxo/comxo 2.png"
+        width="1800"
+        height="4063"
         alt="ComXo final design showing mobile responsive layouts"
         loading="lazy"
       />
       <img
         class="img-full"
         src="assets/img/projects/Comxo/comxo 3.png"
+        width="1800"
+        height="926"
         alt="ComXo final design showing additional page templates"
         loading="lazy"
       />
@@ -433,7 +472,9 @@
       <div class="next-title">SendIT App →</div>
     </div>
     <img
-      src="assets/img/projects/Sendit/sendit-cover.png"
+      src="assets/img/projects/Sendit/sendit-cover.jpg"
+      width="1800"
+      height="1200"
       alt="SendIT App project thumbnail"
       style="height:80px; border-radius:10px; object-fit:cover;"
       loading="lazy"
@@ -454,5 +495,6 @@
 <button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <script src="assets/js/shared-nav.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2b8657f37ec44ec28b66b9d4fefea900"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

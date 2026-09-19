@@ -4,18 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SendIT App — Kyrian Okeke</title>
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/img/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <meta name="description" content="End-to-end product design for SendIT, a mobile money remittance app for sending money to Africa — by Kyrian Okeke, Product Designer." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://personal-website.kyr17n.workers.dev/sendit.html" />
 
   <meta property="og:title" content="SendIT App — Kyrian Okeke" />
   <meta property="og:description" content="End-to-end product design for a mobile money remittance app, focused on fast, trusted transfers to Africa." />
-  <meta property="og:image" content="https://kyr17n.github.io/personal-website/assets/img/projects/Sendit/sendit-cover.png" />
-  <meta property="og:url" content="https://kyr17n.github.io/personal-website/sendit.html" />
+  <meta property="og:image" content="https://personal-website.kyr17n.workers.dev/assets/img/projects/Sendit/sendit-cover.jpg" />
+  <meta property="og:url" content="https://personal-website.kyr17n.workers.dev/sendit.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SendIT App — Kyrian Okeke" />
+  <meta name="twitter:description" content="End-to-end product design for a mobile money remittance app, focused on fast, trusted transfers to Africa." />
+  <meta name="twitter:image" content="https://personal-website.kyr17n.workers.dev/assets/img/projects/Sendit/sendit-cover.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" /></noscript>
   <link rel="stylesheet" href="assets/css/shared.css" />
 
   <style>
@@ -48,6 +58,10 @@
     .case-title {
       font-size: clamp(2.4rem, 5vw, 4.5rem);
       font-weight: 800; letter-spacing: -0.04em; line-height: 1.0; margin-bottom: 1rem;
+      overflow-wrap: break-word; word-break: break-word;
+    }
+    @media (max-width: 380px) {
+      .case-title { font-size: clamp(1.9rem, 9vw, 3rem); }
     }
     .case-subtitle {
       font-size: 1.05rem; color: var(--ink2); line-height: 1.7; max-width: 600px;
@@ -91,7 +105,8 @@
     }
 
     .img-full {
-      width: 100%; border-radius: var(--radius);
+      width: 100%; height: auto;
+      border-radius: var(--radius);
       border: 1px solid var(--border); margin-bottom: 1.5rem;
     }
     .img-scroll-row {
@@ -111,7 +126,8 @@
       gap: 1rem; margin-bottom: 1.5rem;
     }
     .img-grid-3 img {
-      width: 100%; border-radius: var(--radius);
+      width: 100%; height: auto;
+      border-radius: var(--radius);
       border: 1px solid var(--border);
     }
 
@@ -127,7 +143,7 @@
       font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800;
       color: var(--accent); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem;
     }
-    .process-step h4 { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .process-step h3 { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.4rem; }
     .process-step p { font-size: 0.78rem; color: var(--ink3); line-height: 1.5; margin: 0; }
 
     .case-cta {
@@ -163,7 +179,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">KYR17N</a>
+  <a href="index.html" class="nav-logo"><img src="assets/img/nav-logo.png" width="348" height="90" alt="KYR17N" /></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="index.html#work">Work</a></li>
@@ -193,7 +209,7 @@
     </div>
     <div class="case-hero-inner">
       <div>
-        <span class="case-tag">Product Design</span>
+        <span class="case-tag">App Design</span>
         <h1 class="case-title">SendIT App</h1>
         <p class="case-subtitle">End-to-end product design for SendIT — a mobile app that lets users send money home to Africa quickly, safely, and with full transparency on fees and exchange rates.</p>
       </div>
@@ -216,7 +232,9 @@
 
   <img
     class="case-cover reveal"
-    src="https://kyr17n.github.io/personal-website/assets/img/projects/Sendit/sendit-cover.png"
+    src="https://personal-website.kyr17n.workers.dev/assets/img/projects/Sendit/sendit-cover.jpg"
+    width="1800"
+    height="1200"
     alt="SendIT App — hero cover showing app screens"
     loading="eager"
   />
@@ -236,22 +254,22 @@
       <div class="process-steps">
         <div class="process-step">
           <div class="process-num">01</div>
-          <h4>Research</h4>
+          <h3>Research</h3>
           <p>Competitive analysis of Wise, WorldRemit, and Remitly — identifying gaps in trust, fee transparency, and African corridor support.</p>
         </div>
         <div class="process-step">
           <div class="process-num">02</div>
-          <h4>User Flows</h4>
+          <h3>User Flows</h3>
           <p>Mapped the core journeys: onboarding & KYC, send money, track transfer, manage recipients.</p>
         </div>
         <div class="process-step">
           <div class="process-num">03</div>
-          <h4>Prototyping</h4>
+          <h3>Prototyping</h3>
           <p>Iterative prototyping in Figma, testing the send flow with users to reduce drop-off at the fee and rate confirmation step.</p>
         </div>
         <div class="process-step">
           <div class="process-num">04</div>
-          <h4>UI Design</h4>
+          <h3>UI Design</h3>
           <p>High-fidelity screens with a component library built for the engineering handoff — including error states and edge cases.</p>
         </div>
       </div>
@@ -262,11 +280,11 @@
       <h2 class="case-section-title">App Screens</h2>
       <p>The interface leads with the exchange rate and fees upfront — before the user commits to anything. The send flow is designed to take under 60 seconds for returning users, with saved recipients and one-tap repeat transfers.</p>
       <div class="img-scroll-row">
-        <img src="assets/img/projects/Sendit/Artboard 1.jpg" alt="SendIT App — Onboarding screen" loading="lazy" />
-        <img src="assets/img/projects/Sendit/Artboard 2.jpg" alt="SendIT App — Home screen showing exchange rate and quick send" loading="lazy" />
-        <img src="assets/img/projects/Sendit/Artboard 3.jpg" alt="SendIT App — Send money flow step 1: amount and recipient" loading="lazy" />
-        <img src="assets/img/projects/Sendit/Artboard 4.jpg" alt="SendIT App — Send money flow step 2: fee breakdown and confirmation" loading="lazy" />
-        <img src="assets/img/projects/Sendit/Artboard 6.jpg" alt="SendIT App — Transfer status and transaction history screen" loading="lazy" />
+        <img src="assets/img/projects/Sendit/Artboard 1.jpg" width="1800" height="5053" alt="SendIT App — Onboarding screen" loading="lazy" />
+        <img src="assets/img/projects/Sendit/Artboard 2.jpg" width="1800" height="6119" alt="SendIT App — Home screen showing exchange rate and quick send" loading="lazy" />
+        <img src="assets/img/projects/Sendit/Artboard 3.jpg" width="1800" height="6456" alt="SendIT App — Send money flow step 1: amount and recipient" loading="lazy" />
+        <img src="assets/img/projects/Sendit/Artboard 4.jpg" width="1800" height="6002" alt="SendIT App — Send money flow step 2: fee breakdown and confirmation" loading="lazy" />
+        <img src="assets/img/projects/Sendit/Artboard 6.jpg" width="1800" height="9112" alt="SendIT App — Transfer status and transaction history screen" loading="lazy" />
       </div>
     </div>
 
@@ -277,6 +295,8 @@
       <img
         class="img-full"
         src="assets/img/projects/Sendit/Artboard 5.gif"
+        width="1200"
+        height="1043"
         alt="SendIT App — animated prototype showing the booking confirmation flow"
         loading="lazy"
       />
@@ -293,7 +313,9 @@
       <div class="next-title">Vault App →</div>
     </div>
     <img
-      src="assets/img/projects/Vault/vault-cover.png"
+      src="assets/img/projects/Vault/vault-cover.jpg"
+      width="1800"
+      height="1200"
       alt="Vault App project thumbnail"
       style="height:80px; border-radius:10px; object-fit:cover;"
       loading="lazy"
@@ -312,5 +334,6 @@
 
 <button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <script src="assets/js/shared-nav.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2b8657f37ec44ec28b66b9d4fefea900"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

@@ -4,18 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vault App — Kyrian Okeke</title>
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="assets/img/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <meta name="description" content="A personal finance and savings app designed around building healthy money habits — by Kyrian Okeke, Product Designer." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://personal-website.kyr17n.workers.dev/vault.html" />
 
   <meta property="og:title" content="Vault App — Kyrian Okeke" />
   <meta property="og:description" content="A personal finance and savings app designed around building healthy money habits, with a calm, trustworthy visual language." />
-  <meta property="og:image" content="https://kyr17n.github.io/personal-website/assets/img/projects/Vault/vault-cover.png" />
-  <meta property="og:url" content="https://kyr17n.github.io/personal-website/vault.html" />
+  <meta property="og:image" content="https://personal-website.kyr17n.workers.dev/assets/img/projects/Vault/vault-cover.jpg" />
+  <meta property="og:url" content="https://personal-website.kyr17n.workers.dev/vault.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vault App — Kyrian Okeke" />
+  <meta name="twitter:description" content="A personal finance and savings app designed around building healthy money habits, with a calm, trustworthy visual language." />
+  <meta name="twitter:image" content="https://personal-website.kyr17n.workers.dev/assets/img/projects/Vault/vault-cover.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" /></noscript>
  <link rel="stylesheet" href="assets/css/shared.css" />
 
   <style>
@@ -45,6 +55,10 @@
     .case-title {
       font-size: clamp(2.4rem,5vw,4.5rem); font-weight: 800;
       letter-spacing: -0.04em; line-height: 1.0; margin-bottom: 1rem;
+      overflow-wrap: break-word; word-break: break-word;
+    }
+    @media (max-width: 380px) {
+      .case-title { font-size: clamp(1.9rem, 9vw, 3rem); }
     }
     .case-subtitle {
       font-size: 1.05rem; color: var(--ink2); line-height: 1.7; max-width: 600px;
@@ -85,7 +99,8 @@
       max-width: 720px; margin-bottom: 1rem;
     }
     .img-full {
-      width: 100%; border-radius: var(--radius);
+      width: 100%; height: auto;
+      border-radius: var(--radius);
       border: 1px solid var(--border); margin-bottom: 1.5rem;
     }
 
@@ -101,7 +116,7 @@
       font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800;
       color: var(--accent); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem;
     }
-    .process-step h4 { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .process-step h3 { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.4rem; }
     .process-step p { font-size: 0.78rem; color: var(--ink3); line-height: 1.5; margin: 0; }
 
     .case-cta {
@@ -136,7 +151,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">KYR17N</a>
+  <a href="index.html" class="nav-logo"><img src="assets/img/nav-logo.png" width="348" height="90" alt="KYR17N" /></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="index.html#work">Work</a></li>
@@ -166,7 +181,7 @@
     </div>
     <div class="case-hero-inner">
       <div>
-        <span class="case-tag">Product Design</span>
+        <span class="case-tag">App Design</span>
         <h1 class="case-title">Vault App</h1>
         <p class="case-subtitle">A personal finance and savings app designed around building healthy money habits — with a calm, trustworthy visual language that makes finance feel approachable.</p>
       </div>
@@ -189,7 +204,9 @@
 
   <img
     class="case-cover reveal"
-    src="assets/img/projects/Vault/vault-cover.png"
+    src="assets/img/projects/Vault/vault-cover.jpg"
+    width="1800"
+    height="1200"
     alt="Vault App — hero cover image showing the app dashboard"
     loading="eager"
   />
@@ -209,22 +226,22 @@
       <div class="process-steps">
         <div class="process-step">
           <div class="process-num">01</div>
-          <h4>Research</h4>
+          <h3>Research</h3>
           <p>Reviewed existing fintech apps (Monzo, Revolut, Plum) and conducted user interviews about savings habits.</p>
         </div>
         <div class="process-step">
           <div class="process-num">02</div>
-          <h4>Strategy</h4>
+          <h3>Strategy</h3>
           <p>Defined core features: savings pots, spending insights, goal tracking, and weekly summaries.</p>
         </div>
         <div class="process-step">
           <div class="process-num">03</div>
-          <h4>Visual Language</h4>
+          <h3>Visual Language</h3>
           <p>Developed a warm, earthy palette with soft typography to reduce financial anxiety.</p>
         </div>
         <div class="process-step">
           <div class="process-num">04</div>
-          <h4>UI Design</h4>
+          <h3>UI Design</h3>
           <p>Polished high-fidelity screens with a focus on data visualisation and empty state design.</p>
         </div>
       </div>
@@ -238,6 +255,8 @@
       <img
         class="img-full"
         src="assets/img/projects/Vault/vaultpg1-min.png"
+        width="1800"
+        height="20220"
         alt="Vault App — dashboard, savings pots, and goal tracking screens"
         loading="lazy"
       /> 
@@ -251,6 +270,8 @@
       <img
         class="img-full"
         src="assets/img/projects/Vault/vaultpg2-min.png"
+        width="1800"
+        height="16439"
         alt="Vault App — spending insights, transaction history, and notifications screens"
         loading="lazy"
       /> 
@@ -267,7 +288,9 @@
       <div class="next-title">Oldfashioned App →</div>
     </div>
     <img
-      src="assets/img/projects/Oldfashioned/oldfashioned-cover.png"
+      src="assets/img/projects/Oldfashioned/oldfashioned-cover.jpg"
+      width="1800"
+      height="1200"
       alt="Oldfashioned App project thumbnail"
       style="height:80px; border-radius:10px; object-fit:cover;"
       loading="lazy"
@@ -286,5 +309,6 @@
 
 <button class="back-top" id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 <script src="assets/js/shared-nav.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2b8657f37ec44ec28b66b9d4fefea900"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

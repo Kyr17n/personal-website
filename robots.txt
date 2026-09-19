@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://personal-website.kyr17n.workers.dev/sitemap.xml
