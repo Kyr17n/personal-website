@@ -6,7 +6,7 @@
   const label = document.getElementById('theme-label');
   function setTheme(t) {
     root.setAttribute('data-theme', t);
-    if (label) label.textContent = t === 'dark' ? 'Dark' : 'Light';
+    if (label) label.textContent = t === 'dark' ? 'Switch light mode' : 'Switch dark mode';
     localStorage.setItem('theme', t);
   }
   const saved = localStorage.getItem('theme');
